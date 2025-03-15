@@ -1,0 +1,38 @@
+{
+  "id": "code-interpreter",
+  "name": "Code Interpreter",
+  "description": "Execute and visualize code within conversations",
+  "version": "0.3.0",
+  "author": "Open WebUI Team",
+  "license": "MIT",
+  "type": "tool",
+  "tags": ["code", "programming", "visualizations", "data-analysis"],
+  "category": "developer-tools",
+  "compatibility": {
+    "openWebUIVersion": ">=0.1.5"
+  },
+  "repository": "https://github.com/open-webui/code-interpreter",
+  "bugs": {
+    "url": "https://github.com/open-webui/code-interpreter/issues"
+  },
+  "homepage": "https://github.com/open-webui/code-interpreter",
+  "entryPoint": "__init__.py",
+  "config": {
+    "enabledLanguages": ["python", "javascript", "r"],
+    "maxExecutionTime": 30,
+    "sandboxed": true,
+    "allowFileSystem": false,
+    "allowNetworkAccess": false,
+    "memoryLimit": "512M"
+  },
+  "dependencies": [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scikit-learn"
+  ],
+  "permissions": [
+    "execution:code",
+    "ui:render"
+  ]
+}

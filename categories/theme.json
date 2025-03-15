@@ -1,0 +1,14 @@
+{
+  "category": "theme",
+  "name": "Theme Extensions",
+  "description": "Extensions that customize the appearance of Open WebUI",
+  "extensions": [
+    "theme-manager"
+  ],
+  "featured": [
+    "theme-manager"
+  ],
+  "count": 1,
+  "icon": "paint-brush",
+  "lastUpdated": "2025-03-15T12:00:00Z"
+}

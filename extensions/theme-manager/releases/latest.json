@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "releaseDate": "2025-03-05T11:45:00Z",
+  "downloadUrl": "/extensions/theme-manager/releases/0.2.1.zip",
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "size": 312450,
+  "changelog": [
+    "Added three new pre-built themes",
+    "Improved theme editor with real-time preview",
+    "Fixed issues with custom font loading",
+    "Added theme scheduling by time of day"
+  ],
+  "minimumOpenWebUIVersion": "0.1.0",
+  "releaseNotes": "This update adds several new themes and improves the theme editor with real-time previews. We've also fixed issues with custom font loading and added the ability to schedule themes based on time of day."
+}

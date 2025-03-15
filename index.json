@@ -1,0 +1,34 @@
+{
+  "name": "Open WebUI Extension Marketplace",
+  "description": "A central repository of extensions for Open WebUI",
+  "version": "1.0.0",
+  "apiVersion": "v1",
+  "lastUpdated": "2025-03-15T12:00:00Z",
+  "totalExtensions": 3,
+  "categories": [
+    "ui",
+    "api",
+    "model-adapter",
+    "tool",
+    "theme"
+  ],
+  "apis": {
+    "extensions": "/api/v1/extensions.json",
+    "categories": "/api/v1/categories.json",
+    "featured": "/api/v1/featured.json",
+    "search": "/api/v1/search.json"
+  },
+  "featuredExtensions": [
+    "prompt-library",
+    "theme-manager",
+    "code-interpreter"
+  ],
+  "maintainers": [
+    {
+      "name": "Open WebUI Team",
+      "url": "https://github.com/open-webui"
+    }
+  ],
+  "repository": "https://github.com/open-webui/open-webui-extension-marketplace",
+  "license": "MIT"
+}

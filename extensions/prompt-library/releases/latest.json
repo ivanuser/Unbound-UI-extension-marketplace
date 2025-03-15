@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "releaseDate": "2025-03-10T14:30:00Z",
+  "downloadUrl": "/extensions/prompt-library/releases/0.1.0.zip",
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "size": 245678,
+  "changelog": [
+    "Initial release",
+    "Basic prompt management functionality",
+    "Pre-built prompt templates",
+    "Categorization and tagging"
+  ],
+  "minimumOpenWebUIVersion": "0.1.0",
+  "releaseNotes": "This is the first release of the Prompt Library extension for Open WebUI. It provides basic functionality for saving, organizing, and reusing prompts. Future updates will include more advanced features like collaborative sharing, version history, and analytics."
+}

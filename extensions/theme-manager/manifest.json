@@ -1,0 +1,32 @@
+{
+  "id": "theme-manager",
+  "name": "Theme Manager",
+  "description": "Customize the appearance of Open WebUI with themes and styles",
+  "version": "0.2.1",
+  "author": "Open WebUI Team",
+  "license": "MIT",
+  "type": "theme",
+  "tags": ["themes", "customization", "appearance"],
+  "category": "appearance",
+  "compatibility": {
+    "openWebUIVersion": ">=0.1.0"
+  },
+  "repository": "https://github.com/open-webui/theme-manager",
+  "bugs": {
+    "url": "https://github.com/open-webui/theme-manager/issues"
+  },
+  "homepage": "https://github.com/open-webui/theme-manager",
+  "entryPoint": "__init__.py",
+  "config": {
+    "sidebarIcon": "paint-brush",
+    "sidebarLabel": "Theme Manager",
+    "defaultTheme": "default",
+    "allowUserThemes": true
+  },
+  "dependencies": [],
+  "permissions": [
+    "storage:read",
+    "storage:write",
+    "ui:theme"
+  ]
+}

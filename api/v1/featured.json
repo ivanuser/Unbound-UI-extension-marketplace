@@ -1,0 +1,73 @@
+{
+  "featured": [
+    {
+      "id": "prompt-library",
+      "name": "Prompt Library",
+      "description": "Save, organize, and reuse effective prompts with categories and templates",
+      "version": "0.1.0",
+      "author": "Open WebUI Team",
+      "type": "ui",
+      "tags": ["prompts", "templates", "productivity"],
+      "preview": "/extensions/prompt-library/preview.png",
+      "rating": 4.8,
+      "downloads": 1240,
+      "featuredReason": "Most popular productivity extension",
+      "learnMoreUrl": "/extensions/prompt-library/README.md"
+    },
+    {
+      "id": "theme-manager",
+      "name": "Theme Manager",
+      "description": "Customize the appearance of Open WebUI with themes and styles",
+      "version": "0.2.1",
+      "author": "Open WebUI Team",
+      "type": "theme",
+      "tags": ["themes", "customization", "appearance"],
+      "preview": "/extensions/theme-manager/preview.png",
+      "rating": 4.7,
+      "downloads": 980,
+      "featuredReason": "Top-rated appearance customization tool",
+      "learnMoreUrl": "/extensions/theme-manager/README.md"
+    },
+    {
+      "id": "code-interpreter",
+      "name": "Code Interpreter",
+      "description": "Execute and visualize code within conversations",
+      "version": "0.3.0",
+      "author": "Open WebUI Team",
+      "type": "tool",
+      "tags": ["code", "programming", "visualizations", "data-analysis"],
+      "preview": "/extensions/code-interpreter/preview.png",
+      "rating": 4.9,
+      "downloads": 750,
+      "featuredReason": "Essential tool for developers and data analysts",
+      "learnMoreUrl": "/extensions/code-interpreter/README.md"
+    }
+  ],
+  "collections": [
+    {
+      "id": "productivity-essentials",
+      "name": "Productivity Essentials",
+      "description": "Must-have extensions to boost your productivity",
+      "extensions": ["prompt-library"]
+    },
+    {
+      "id": "developer-toolkit",
+      "name": "Developer Toolkit",
+      "description": "Essential extensions for programmers and developers",
+      "extensions": ["code-interpreter"]
+    },
+    {
+      "id": "customization-pack",
+      "name": "Customization Pack",
+      "description": "Extensions to personalize your Open WebUI experience",
+      "extensions": ["theme-manager"]
+    }
+  ],
+  "spotlight": {
+    "id": "prompt-library",
+    "title": "Supercharge Your Workflows with Prompt Library",
+    "description": "The Prompt Library extension helps you save time and achieve better results by organizing and reusing your most effective prompts. With pre-built templates and easy categorization, you'll never lose a great prompt again.",
+    "banner": "/extensions/prompt-library/banner.png",
+    "learnMoreUrl": "/extensions/prompt-library/README.md"
+  }
+}

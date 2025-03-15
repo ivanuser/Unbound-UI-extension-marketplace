@@ -1,0 +1,99 @@
+{
+  "categories": [
+    {
+      "id": "productivity",
+      "name": "Productivity",
+      "description": "Extensions that enhance productivity and workflow",
+      "icon": "clipboard-list",
+      "count": 5,
+      "extensions": ["prompt-library"]
+    },
+    {
+      "id": "appearance",
+      "name": "Appearance",
+      "description": "Extensions that customize the look and feel of Open WebUI",
+      "icon": "paint-brush",
+      "count": 4,
+      "extensions": ["theme-manager"]
+    },
+    {
+      "id": "developer-tools",
+      "name": "Developer Tools",
+      "description": "Extensions for software development and coding",
+      "icon": "code",
+      "count": 7,
+      "extensions": ["code-interpreter"]
+    },
+    {
+      "id": "ai-models",
+      "name": "AI Models",
+      "description": "Extensions that add integrations with additional AI models",
+      "icon": "brain",
+      "count": 5,
+      "extensions": []
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "description": "General utility extensions and tools",
+      "icon": "cog",
+      "count": 3,
+      "extensions": []
+    },
+    {
+      "id": "integrations",
+      "name": "Integrations",
+      "description": "Extensions that connect Open WebUI with other services",
+      "icon": "link",
+      "count": 6,
+      "extensions": []
+    }
+  ],
+  "extensionTypes": [
+    {
+      "id": "ui",
+      "name": "UI Extensions",
+      "description": "Extensions that modify or enhance the user interface",
+      "count": 10
+    },
+    {
+      "id": "api",
+      "name": "API Extensions",
+      "description": "Extensions that add new API endpoints",
+      "count": 5
+    },
+    {
+      "id": "model-adapter",
+      "name": "Model Adapters",
+      "description": "Extensions that integrate new AI models",
+      "count": 8
+    },
+    {
+      "id": "tool",
+      "name": "Tool Extensions",
+      "description": "Extensions that add new capabilities and tools",
+      "count": 12
+    },
+    {
+      "id": "theme",
+      "name": "Theme Extensions",
+      "description": "Extensions that customize the appearance",
+      "count": 6
+    }
+  ],
+  "tags": [
+    "prompts",
+    "templates",
+    "productivity",
+    "themes",
+    "customization",
+    "appearance",
+    "code",
+    "programming",
+    "visualizations",
+    "data-analysis",
+    "models",
+    "integrations",
+    "utilities"
+  ]
+}

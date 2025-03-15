@@ -1,0 +1,14 @@
+{
+  "category": "ui",
+  "name": "UI Extensions",
+  "description": "Extensions that modify or enhance the user interface",
+  "extensions": [
+    "prompt-library"
+  ],
+  "featured": [
+    "prompt-library"
+  ],
+  "count": 1,
+  "icon": "layout",
+  "lastUpdated": "2025-03-15T12:00:00Z"
+}

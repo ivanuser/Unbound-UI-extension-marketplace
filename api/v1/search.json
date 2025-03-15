@@ -1,0 +1,78 @@
+{
+  "endpoint": "/api/v1/search.json",
+  "description": "Search for extensions by name, description, category, or tags",
+  "parameters": {
+    "q": {
+      "type": "string",
+      "description": "Search query",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "description": "Filter by category",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "description": "Filter by extension type",
+      "required": false,
+      "enum": ["ui", "api", "model-adapter", "tool", "theme"]
+    },
+    "tag": {
+      "type": "string",
+      "description": "Filter by tag",
+      "required": false
+    },
+    "page": {
+      "type": "integer",
+      "description": "Page number for pagination",
+      "required": false,
+      "default": 1
+    },
+    "limit": {
+      "type": "integer",
+      "description": "Number of results per page",
+      "required": false,
+      "default": 10,
+      "maximum": 50
+    },
+    "sort": {
+      "type": "string",
+      "description": "Sort order",
+      "required": false,
+      "enum": ["relevance", "downloads", "rating", "newest", "updated"],
+      "default": "relevance"
+    }
+  },
+  "example": {
+    "request": "/api/v1/search.json?q=prompt&category=productivity&limit=5",
+    "response": {
+      "results": [
+        {
+          "id": "prompt-library",
+          "name": "Prompt Library",
+          "description": "Save, organize, and reuse effective prompts with categories and templates",
+          "version": "0.1.0",
+          "author": "Open WebUI Team",
+          "type": "ui",
+          "tags": ["prompts", "templates", "productivity"],
+          "category": "productivity",
+          "rating": 4.8,
+          "downloads": 1240,
+          "relevance": 0.95
+        }
+      ],
+      "pagination": {
+        "total": 1,
+        "page": 1,
+        "pageSize": 5,
+        "totalPages": 1
+      },
+      "query": {
+        "q": "prompt",
+        "category": "productivity",
+        "limit": 5
+      }
+    }
+  }
+}

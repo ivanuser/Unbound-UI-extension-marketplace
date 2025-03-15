@@ -1,0 +1,16 @@
+{
+  "version": "0.3.0",
+  "releaseDate": "2025-03-12T10:20:00Z",
+  "downloadUrl": "/extensions/code-interpreter/releases/0.3.0.zip",
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "size": 458760,
+  "changelog": [
+    "Added support for R language",
+    "Improved visualization capabilities with interactive charts",
+    "Enhanced dataframe rendering and exploration",
+    "Added file upload and processing features",
+    "Fixed memory leak issues in long-running sessions"
+  ],
+  "minimumOpenWebUIVersion": "0.1.5",
+  "releaseNotes": "This release adds support for R language and improves visualization capabilities with interactive charts. We've also enhanced dataframe rendering and exploration, added file upload and processing features, and fixed memory leak issues in long-running sessions."
+}
