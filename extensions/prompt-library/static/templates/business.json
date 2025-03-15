@@ -1,0 +1,282 @@
+[
+  {
+    "id": "business-proposal",
+    "title": "Business Proposal",
+    "description": "Generate a comprehensive business proposal",
+    "content": "Create a detailed business proposal for [company_name], a [company_type] seeking to [objective]. The proposal should be addressed to [recipient] and include the following sections:\n\n1. Executive Summary: Provide a compelling overview of the proposal.\n\n2. Company/Project Background:\n   - Brief history and mission of [company_name]\n   - Key team members and their qualifications\n   - Relevant experience and past successes\n\n3. Problem Statement:\n   - Clearly define the problem or opportunity being addressed\n   - Market analysis supporting the need for this solution\n\n4. Proposed Solution:\n   - Detailed description of [solution_name]\n   - Key features and benefits\n   - Unique selling propositions\n   - Implementation timeline\n\n5. Market Analysis:\n   - Target market and size\n   - Competitive landscape\n   - Market trends and opportunities\n\n6. Financial Projections:\n   - Investment required: [investment_amount]\n   - Revenue projections for [timeframe]\n   - Break-even analysis\n   - ROI calculations\n\n7. Marketing and Sales Strategy:\n   - Go-to-market approach\n   - Customer acquisition strategy\n   - Pricing model\n\n8. Call to Action:\n   - Clear next steps\n   - Contact information\n\nThe tone should be [tone] and the length approximately [length] pages. Use specific industry terminology relevant to [industry] where appropriate.",
+    "category": "business",
+    "tags": ["proposal", "business plan", "pitch"],
+    "variables": [
+      {
+        "name": "company_name",
+        "description": "Name of the company",
+        "default": "GreenTech Solutions"
+      },
+      {
+        "name": "company_type",
+        "description": "Type of company",
+        "default": "sustainable technology startup"
+      },
+      {
+        "name": "objective",
+        "description": "Business objective",
+        "default": "secure Series A funding for their innovative solar energy storage solution"
+      },
+      {
+        "name": "recipient",
+        "description": "Proposal recipient",
+        "default": "potential investors and venture capital firms"
+      },
+      {
+        "name": "solution_name",
+        "description": "Name of proposed solution",
+        "default": "EcoStore Battery System"
+      },
+      {
+        "name": "investment_amount",
+        "description": "Investment amount",
+        "default": "$2.5 million"
+      },
+      {
+        "name": "timeframe",
+        "description": "Financial projection timeframe",
+        "default": "3 years"
+      },
+      {
+        "name": "tone",
+        "description": "Writing tone",
+        "default": "professional yet enthusiastic"
+      },
+      {
+        "name": "length",
+        "description": "Document length",
+        "default": "8-10"
+      },
+      {
+        "name": "industry",
+        "description": "Industry",
+        "default": "renewable energy"
+      }
+    ]
+  },
+  {
+    "id": "marketing-plan",
+    "title": "Marketing Plan",
+    "description": "Create a comprehensive marketing plan",
+    "content": "Develop a detailed marketing plan for [product_name], a [product_description] targeting [target_audience]. The marketing plan should cover a [timeframe] timeframe with a budget of approximately [budget].\n\n1. Executive Summary:\n   - Brief overview of the marketing plan and its objectives\n\n2. Product/Service Overview:\n   - Description of [product_name]\n   - Key features and benefits\n   - Unique selling propositions\n   - Current market position\n\n3. Market Analysis:\n   - Target market demographics and psychographics\n   - Market size and growth potential\n   - Competitor analysis (including [competitors])\n   - SWOT analysis\n\n4. Marketing Objectives:\n   - Specific, measurable goals (e.g., [specific_goals])\n   - KPIs to track success\n\n5. Marketing Strategy:\n   - Positioning strategy\n   - Pricing strategy\n   - Distribution channels\n   - Brand messaging and voice\n\n6. Marketing Tactics and Channels:\n   - Digital marketing initiatives (social media, SEO, content marketing, email)\n   - Traditional marketing methods if applicable\n   - PR and media outreach\n   - Events and experiential marketing\n\n7. Content Strategy:\n   - Types of content to be created\n   - Content calendar outline\n   - Key themes and messages\n\n8. Budget Allocation:\n   - Breakdown of how the [budget] will be allocated across channels\n   - Projected ROI for each channel\n\n9. Implementation Timeline:\n   - Month-by-month plan for the [timeframe] period\n   - Key milestones and launches\n\n10. Evaluation and Measurement:\n    - Methods for tracking success\n    - Reporting cadence and responsible parties\n    - Contingency plans\n\nThe plan should be [tone] in tone and include specific, actionable recommendations rather than generic advice.",
+    "category": "business",
+    "tags": ["marketing", "strategy", "planning"],
+    "variables": [
+      {
+        "name": "product_name",
+        "description": "Product or service name",
+        "default": "FitTrack Pro"
+      },
+      {
+        "name": "product_description",
+        "description": "Brief product description",
+        "default": "fitness wearable device with advanced health monitoring features"
+      },
+      {
+        "name": "target_audience",
+        "description": "Target market",
+        "default": "health-conscious professionals aged 25-45"
+      },
+      {
+        "name": "timeframe",
+        "description": "Plan timeframe",
+        "default": "12-month"
+      },
+      {
+        "name": "budget",
+        "description": "Marketing budget",
+        "default": "$150,000"
+      },
+      {
+        "name": "competitors",
+        "description": "Main competitors",
+        "default": "Fitbit, Apple Watch, Garmin"
+      },
+      {
+        "name": "specific_goals",
+        "description": "Specific marketing goals",
+        "default": "increase market share by 5%, acquire 50,000 new customers, achieve 20% revenue growth"
+      },
+      {
+        "name": "tone",
+        "description": "Plan tone",
+        "default": "data-driven and strategic"
+      }
+    ]
+  },
+  {
+    "id": "competitive-analysis",
+    "title": "Competitive Analysis",
+    "description": "Detailed competitive analysis for business strategy",
+    "content": "Conduct a comprehensive competitive analysis for [company_name], a [company_description] in the [industry] industry. The analysis should examine [number_competitors] key competitors and provide strategic insights.\n\n1. Company Overview:\n   - Brief description of [company_name]\n   - Current market position and value proposition\n   - Key products/services and target markets\n\n2. Industry Landscape:\n   - Market size and growth trends\n   - Key industry drivers and challenges\n   - Regulatory factors affecting competition\n\n3. Competitor Profiles:\n   For each of the following competitors ([competitors]), provide:\n   - Company background and market position\n   - Product/service offerings and pricing strategies\n   - Target customer segments\n   - Sales and marketing approaches\n   - Strengths and weaknesses\n   - Recent strategic moves and announcements\n\n4. Comparative Analysis:\n   - Market share comparison\n   - Product/service feature matrix\n   - Pricing comparison\n   - Customer satisfaction and brand perception\n   - Digital presence and marketing effectiveness\n   - Financial performance metrics (if available)\n\n5. SWOT Analysis for [company_name]:\n   - Strengths relative to competitors\n   - Weaknesses that need to be addressed\n   - Opportunities based on competitive gaps\n   - Threats from competitive forces\n\n6. Strategic Recommendations:\n   - [number_recommendations] actionable recommendations\n   - Potential areas for differentiation\n   - Defensive strategies against competitor threats\n   - Offensive strategies to gain market share\n\n7. Monitoring Framework:\n   - Key competitive indicators to track\n   - Recommended frequency and methods for ongoing competitive intelligence\n\nThe analysis should be [tone] and provide specific, actionable insights rather than general observations.",
+    "category": "business",
+    "tags": ["competitive analysis", "market research", "strategy"],
+    "variables": [
+      {
+        "name": "company_name",
+        "description": "Company name",
+        "default": "NutriMeal"
+      },
+      {
+        "name": "company_description",
+        "description": "Brief company description",
+        "default": "meal delivery service focusing on personalized nutrition plans"
+      },
+      {
+        "name": "industry",
+        "description": "Industry",
+        "default": "meal-kit delivery and nutritional services"
+      },
+      {
+        "name": "number_competitors",
+        "description": "Number of competitors to analyze",
+        "default": "5"
+      },
+      {
+        "name": "competitors",
+        "description": "List of competitors",
+        "default": "HelloFresh, Blue Apron, Freshly, Factor, and Sunbasket"
+      },
+      {
+        "name": "number_recommendations",
+        "description": "Number of strategic recommendations",
+        "default": "4-6"
+      },
+      {
+        "name": "tone",
+        "description": "Analysis tone",
+        "default": "objective and data-driven with clear strategic implications"
+      }
+    ]
+  },
+  {
+    "id": "financial-projection",
+    "title": "Financial Projection",
+    "description": "Generate financial projections for business planning",
+    "content": "Create a [timeframe] financial projection for [business_name], a [business_type]. The projection should be suitable for [purpose] and include detailed monthly figures for the first year, and quarterly figures for subsequent years.\n\n1. Executive Summary:\n   - Key financial highlights\n   - Growth trajectory\n   - Break-even timeline\n\n2. Assumptions:\n   - Revenue assumptions:\n     * Initial customer base: [initial_customers]\n     * Customer growth rate: [growth_rate]% monthly/annually\n     * Average revenue per customer: [average_revenue]\n     * Seasonality factors if applicable\n   - Cost assumptions:\n     * Fixed costs: [fixed_costs]\n     * Variable costs: [variable_costs]% of revenue\n     * Staffing plan and costs\n     * Marketing budget: [marketing_budget]% of revenue\n\n3. Projected Income Statement:\n   - Revenue breakdown by [revenue_streams]\n   - Cost of goods sold/services\n   - Gross profit and margin\n   - Operating expenses (marketing, salaries, R&D, etc.)\n   - EBITDA\n   - Depreciation and amortization\n   - Interest and taxes\n   - Net profit and margin\n\n4. Cash Flow Projection:\n   - Initial investment/funding: [initial_investment]\n   - Monthly/quarterly cash inflows and outflows\n   - Cumulative cash position\n   - Cash burn rate during growth phase\n   - Months of runway based on current funding\n\n5. Balance Sheet Projection:\n   - Assets (current and non-current)\n   - Liabilities (current and non-current)\n   - Equity\n\n6. Key Financial Metrics:\n   - Break-even analysis\n   - ROI projection\n   - Customer acquisition cost (CAC)\n   - Lifetime value (LTV)\n   - LTV:CAC ratio\n   - Payback period\n\n7. Sensitivity Analysis:\n   - Best-case scenario\n   - Expected scenario\n   - Worst-case scenario\n   - Key variables that most impact financial outcomes\n\n8. Funding Requirements:\n   - Capital needed to execute the plan\n   - Suggested funding stages\n   - Use of funds breakdown\n\nPlease present the projection in a clear, [tone] manner that would be appropriate for [audience].",
+    "category": "business",
+    "tags": ["finance", "projections", "business plan"],
+    "variables": [
+      {
+        "name": "timeframe",
+        "description": "Projection timeframe",
+        "default": "3-year"
+      },
+      {
+        "name": "business_name",
+        "description": "Business name",
+        "default": "TechSolutions Inc."
+      },
+      {
+        "name": "business_type",
+        "description": "Type of business",
+        "default": "B2B SaaS startup offering project management software"
+      },
+      {
+        "name": "purpose",
+        "description": "Purpose of projection",
+        "default": "seeking Series A funding"
+      },
+      {
+        "name": "initial_customers",
+        "description": "Initial customer count",
+        "default": "50"
+      },
+      {
+        "name": "growth_rate",
+        "description": "Growth rate percentage",
+        "default": "15"
+      },
+      {
+        "name": "average_revenue",
+        "description": "Average revenue per customer",
+        "default": "$199 per month"
+      },
+      {
+        "name": "fixed_costs",
+        "description": "Fixed costs",
+        "default": "$25,000 per month"
+      },
+      {
+        "name": "variable_costs",
+        "description": "Variable costs percentage",
+        "default": "30"
+      },
+      {
+        "name": "marketing_budget",
+        "description": "Marketing budget percentage",
+        "default": "20"
+      },
+      {
+        "name": "revenue_streams",
+        "description": "Revenue streams",
+        "default": "subscription tiers, implementation services, and add-on features"
+      },
+      {
+        "name": "initial_investment",
+        "description": "Initial investment",
+        "default": "$500,000"
+      },
+      {
+        "name": "tone",
+        "description": "Presentation tone",
+        "default": "professional and conservative"
+      },
+      {
+        "name": "audience",
+        "description": "Target audience",
+        "default": "potential investors and the executive team"
+      }
+    ]
+  },
+  {
+    "id": "business-plan",
+    "title": "Business Plan",
+    "description": "Comprehensive business plan for startups or existing businesses",
+    "content": "Create a detailed business plan for [business_name], a [business_type] in the [industry] industry. This plan is intended for [audience] and should be approximately [length] pages.\n\n1. Executive Summary:\n   - Business concept and vision\n   - Value proposition\n   - Key objectives\n   - Current status (startup, growth stage, etc.)\n   - Financial highlights and funding needs\n\n2. Company Description:\n   - Mission and vision statements\n   - Company history (if applicable)\n   - Legal structure and ownership\n   - Location and facilities\n   - Team and organizational structure\n\n3. Products/Services:\n   - Detailed description of offerings\n   - Unique features and benefits\n   - Intellectual property status\n   - Research and development activities\n   - Future product roadmap\n\n4. Market Analysis:\n   - Industry overview and trends\n   - Target market size and growth potential\n   - Customer segmentation and personas\n   - Needs analysis and pain points addressed\n\n5. Competitive Analysis:\n   - Direct and indirect competitors\n   - Competitive advantages and disadvantages\n   - Barriers to entry\n   - SWOT analysis\n\n6. Marketing and Sales Strategy:\n   - Positioning and branding\n   - Pricing strategy\n   - Sales channels and process\n   - Marketing channels and tactics\n   - Customer acquisition and retention strategies\n\n7. Operations Plan:\n   - Business location and facilities\n   - Equipment and technology\n   - Supply chain and production process\n   - Quality control measures\n   - Key partnerships and suppliers\n\n8. Management and Organization:\n   - Leadership team and key personnel\n   - Board of advisors/directors\n   - Organizational structure\n   - Hiring plan and human resources\n\n9. Financial Plan:\n   - Startup costs (if applicable)\n   - [timeframe] financial projections\n   - Break-even analysis\n   - Funding requirements and use of funds\n   - Exit strategy (if applicable)\n\n10. Implementation Timeline:\n    - Key milestones and deadlines\n    - Major phases of business development\n    - Critical path activities\n\n11. Risk Analysis:\n    - Potential risks and challenges\n    - Mitigation strategies\n    - Contingency plans\n\n12. Appendices:\n    - Detailed financial statements\n    - Market research data\n    - Legal documents\n    - Other supporting materials\n\nThe tone should be [tone] and the plan should be realistic, specific, and tailored to the unique aspects of [business_name] and its market.",
+    "category": "business",
+    "tags": ["business plan", "startup", "strategy"],
+    "variables": [
+      {
+        "name": "business_name",
+        "description": "Business name",
+        "default": "EcoPackage"
+      },
+      {
+        "name": "business_type",
+        "description": "Type of business",
+        "default": "sustainable packaging solutions provider"
+      },
+      {
+        "name": "industry",
+        "description": "Industry",
+        "default": "eco-friendly packaging"
+      },
+      {
+        "name": "audience",
+        "description": "Intended audience",
+        "default": "potential investors and banking partners"
+      },
+      {
+        "name": "length",
+        "description": "Document length",
+        "default": "20-25"
+      },
+      {
+        "name": "timeframe",
+        "description": "Financial projection timeframe",
+        "default": "3-5 year"
+      },
+      {
+        "name": "tone",
+        "description": "Document tone",
+        "default": "confident yet realistic"
+      }
+    ]
+  }
+]

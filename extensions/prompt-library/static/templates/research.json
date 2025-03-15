@@ -1,0 +1,222 @@
+[
+  {
+    "id": "literature-review",
+    "title": "Literature Review",
+    "description": "Structured literature review on a research topic",
+    "content": "Please create a structured literature review on the topic of \"[topic]\" focused on the field of [field]. Include the following sections:\n\n1. Introduction: Provide a brief overview of the topic and its importance in [field].\n\n2. Key Research Findings: Identify and analyze the [number] most significant research findings or theories in this area. For each one, include:\n   - The main researchers/authors associated with it\n   - Key methodologies used\n   - Major conclusions\n   - Limitations of the research\n\n3. Current Debates and Contradictions: Highlight any ongoing debates, contradictory findings, or areas of uncertainty in the literature.\n\n4. Research Gaps: Identify [gaps] areas where further research is needed.\n\n5. Conclusion: Summarize the current state of knowledge and potential future directions for research.\n\nIn your review, focus on scholarly sources from the past [timeframe], with emphasis on publications in [journals_conferences] if applicable.",
+    "category": "research",
+    "tags": ["academic", "literature review", "research"],
+    "variables": [
+      {
+        "name": "topic",
+        "description": "Research topic",
+        "default": "the application of machine learning in climate change prediction"
+      },
+      {
+        "name": "field",
+        "description": "Academic field",
+        "default": "environmental science and computer science"
+      },
+      {
+        "name": "number",
+        "description": "Number of research findings to analyze",
+        "default": "5-7"
+      },
+      {
+        "name": "gaps",
+        "description": "Number of research gaps to identify",
+        "default": "3-4"
+      },
+      {
+        "name": "timeframe",
+        "description": "Timeframe for literature",
+        "default": "10 years"
+      },
+      {
+        "name": "journals_conferences",
+        "description": "Relevant journals or conferences",
+        "default": "Nature Climate Change, Geophysical Research Letters, and NeurIPS"
+      }
+    ]
+  },
+  {
+    "id": "methodology-design",
+    "title": "Research Methodology Design",
+    "description": "Detailed research methodology for a study",
+    "content": "Design a comprehensive research methodology for a [type] study investigating \"[topic]\" in the field of [field]. Include the following components:\n\n1. Research Questions and Hypotheses:\n   - Primary research question\n   - [number_hypotheses] specific hypotheses to test\n\n2. Research Design:\n   - Justify the choice of a [type] approach\n   - Outline the overall structure and phases of the study\n\n3. Data Collection Methods:\n   - Specify [data_methods] as primary data collection techniques\n   - Detail the tools/instruments to be used\n   - Explain the sampling strategy and target sample size\n\n4. Data Analysis Approach:\n   - Outline the [analysis_methods] to be used\n   - Explain how the data will be processed, coded, and analyzed\n   - Address potential biases and how they will be mitigated\n\n5. Ethical Considerations:\n   - Identify key ethical issues related to this research\n   - Propose specific procedures to address these issues\n\n6. Timeline and Resources:\n   - Propose a realistic timeline for completing the study\n   - Identify essential resources needed\n\n7. Limitations:\n   - Acknowledge methodological limitations\n   - Suggest how these limitations might be addressed in future research",
+    "category": "research",
+    "tags": ["methodology", "research design", "academic"],
+    "variables": [
+      {
+        "name": "type",
+        "description": "Research type",
+        "default": "mixed-methods"
+      },
+      {
+        "name": "topic",
+        "description": "Research topic",
+        "default": "the impact of remote work on employee productivity and well-being"
+      },
+      {
+        "name": "field",
+        "description": "Academic field",
+        "default": "organizational psychology"
+      },
+      {
+        "name": "number_hypotheses",
+        "description": "Number of hypotheses",
+        "default": "3-4"
+      },
+      {
+        "name": "data_methods",
+        "description": "Data collection methods",
+        "default": "surveys, semi-structured interviews, and productivity metrics"
+      },
+      {
+        "name": "analysis_methods",
+        "description": "Analysis methods",
+        "default": "statistical analysis for quantitative data and thematic analysis for qualitative data"
+      }
+    ]
+  },
+  {
+    "id": "research-proposal",
+    "title": "Research Proposal",
+    "description": "Comprehensive research proposal for academic or funding purposes",
+    "content": "Please create a comprehensive research proposal on the topic \"[topic]\" in the field of [field]. The proposal should be structured for [purpose] and include the following sections:\n\n1. Executive Summary (Brief overview of the entire proposal)\n\n2. Introduction and Background\n   - Clearly state the research problem and its significance\n   - Provide relevant background information and context\n   - Briefly review existing literature to establish knowledge gaps\n\n3. Research Questions and Objectives\n   - Primary research question\n   - [number_objectives] specific research objectives\n   - Potential hypotheses if applicable\n\n4. Theoretical Framework\n   - The theoretical lens through which the research will be conducted\n   - Conceptual model if applicable\n\n5. Methodology\n   - Research design: [design]\n   - Data collection methods: [methods]\n   - Sampling strategy and participants\n   - Data analysis approach\n   - Ethical considerations\n\n6. Timeline and Milestones\n   - [duration] project timeline with key phases and deliverables\n\n7. Budget (if applicable)\n   - Major cost categories and estimated amounts\n\n8. Expected Outcomes and Impact\n   - Anticipated findings\n   - Theoretical and practical contributions\n   - Potential for further research\n\n9. Dissemination Plan\n   - How the findings will be shared with [audience]\n\n10. References (in [citation_style] format)",
+    "category": "research",
+    "tags": ["proposal", "academic", "grant"],
+    "variables": [
+      {
+        "name": "topic",
+        "description": "Research topic",
+        "default": "the effectiveness of mindfulness-based interventions for managing chronic pain"
+      },
+      {
+        "name": "field",
+        "description": "Academic field",
+        "default": "clinical psychology and pain management"
+      },
+      {
+        "name": "purpose",
+        "description": "Proposal purpose",
+        "default": "grant funding application"
+      },
+      {
+        "name": "number_objectives",
+        "description": "Number of research objectives",
+        "default": "3-5"
+      },
+      {
+        "name": "design",
+        "description": "Research design",
+        "default": "randomized controlled trial with mixed methods"
+      },
+      {
+        "name": "methods",
+        "description": "Data collection methods",
+        "default": "standardized pain assessments, quality of life measures, semi-structured interviews, and daily pain journals"
+      },
+      {
+        "name": "duration",
+        "description": "Project duration",
+        "default": "18-month"
+      },
+      {
+        "name": "audience",
+        "description": "Target audience",
+        "default": "healthcare professionals, academic community, and patient advocacy groups"
+      },
+      {
+        "name": "citation_style",
+        "description": "Citation style",
+        "default": "APA 7th edition"
+      }
+    ]
+  },
+  {
+    "id": "data-analysis-plan",
+    "title": "Data Analysis Plan",
+    "description": "Detailed plan for analyzing research data",
+    "content": "Please create a comprehensive data analysis plan for a research project on \"[topic]\" in the field of [field]. The data consists of [data_type]. The analysis plan should include:\n\n1. Research Questions and Hypotheses:\n   - Restate the primary research questions\n   - List specific hypotheses to be tested\n\n2. Data Preparation and Cleaning:\n   - Steps for organizing raw data\n   - Data cleaning procedures to address [data_issues]\n   - Handling missing values and outliers\n\n3. Descriptive Statistics:\n   - Key variables to be described\n   - Specific descriptive measures to calculate\n   - Visualization approaches\n\n4. Primary Analysis Methods:\n   - [primary_methods] as the main analytical approach(es)\n   - Justification for these methods\n   - Software and packages to be used\n\n5. Secondary and Exploratory Analyses:\n   - Additional analyses to consider\n   - Subgroup analyses if applicable\n\n6. Interpretation Framework:\n   - How results will be interpreted\n   - Thresholds for statistical significance\n   - Effect size considerations\n\n7. Limitations and Potential Issues:\n   - Anticipated challenges in analysis\n   - How limitations will be addressed in reporting\n\n8. Timeline:\n   - Estimated time needed for each analysis phase",
+    "category": "research",
+    "tags": ["data analysis", "statistics", "research methods"],
+    "variables": [
+      {
+        "name": "topic",
+        "description": "Research topic",
+        "default": "socioeconomic factors affecting educational outcomes"
+      },
+      {
+        "name": "field",
+        "description": "Academic field",
+        "default": "education and sociology"
+      },
+      {
+        "name": "data_type",
+        "description": "Type of data",
+        "default": "a longitudinal dataset with standardized test scores, demographic information, and school-level variables for 5,000 students across 50 schools"
+      },
+      {
+        "name": "data_issues",
+        "description": "Data issues to address",
+        "default": "inconsistent formatting, potential duplicate entries, and coding errors"
+      },
+      {
+        "name": "primary_methods",
+        "description": "Primary analysis methods",
+        "default": "multilevel modeling and structural equation modeling"
+      }
+    ]
+  },
+  {
+    "id": "research-summary",
+    "title": "Research Paper Summary",
+    "description": "Concise summary of a research paper or article",
+    "content": "Please provide a comprehensive summary of the research paper \"[paper_title]\" by [authors]. The paper was published in [journal] in [year] and addresses the topic of [topic] in the field of [field].\n\nThe summary should include:\n\n1. Research Objective and Questions:\n   - Main purpose of the study\n   - Specific research questions or hypotheses\n\n2. Theoretical Framework:\n   - Key theories or models guiding the research\n\n3. Methodology:\n   - Research design: [design]\n   - Sample/participants: [participants]\n   - Data collection methods\n   - Analysis approach\n\n4. Key Findings:\n   - Most significant results, organized by research question\n   - Statistical significance and effect sizes where relevant\n\n5. Main Conclusions:\n   - Authors' interpretations of findings\n   - Theoretical and practical implications\n\n6. Limitations:\n   - Methodological or conceptual limitations acknowledged by the authors\n\n7. Future Research:\n   - Suggestions for further investigation\n\n8. Critical Assessment:\n   - Strengths and weaknesses of the study\n   - How it contributes to the broader literature\n\nThe summary should be comprehensive yet concise, focusing on the most important aspects of the paper.",
+    "category": "research",
+    "tags": ["summary", "literature", "academic"],
+    "variables": [
+      {
+        "name": "paper_title",
+        "description": "Title of the paper",
+        "default": "The Impact of Social Media Use on Adolescent Mental Health: A Longitudinal Study"
+      },
+      {
+        "name": "authors",
+        "description": "Paper authors",
+        "default": "Johnson et al."
+      },
+      {
+        "name": "journal",
+        "description": "Journal name",
+        "default": "Journal of Adolescent Psychology"
+      },
+      {
+        "name": "year",
+        "description": "Publication year",
+        "default": "2023"
+      },
+      {
+        "name": "topic",
+        "description": "Paper topic",
+        "default": "the relationship between social media usage patterns and psychological wellbeing in teenagers"
+      },
+      {
+        "name": "field",
+        "description": "Academic field",
+        "default": "developmental psychology and digital media studies"
+      },
+      {
+        "name": "design",
+        "description": "Research design",
+        "default": "three-year longitudinal study with mixed-methods approach"
+      },
+      {
+        "name": "participants",
+        "description": "Study participants",
+        "default": "1,500 adolescents aged 13-17 from diverse socioeconomic backgrounds"
+      }
+    ]
+  }
+]

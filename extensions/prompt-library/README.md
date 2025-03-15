@@ -2,6 +2,8 @@
 
 Save, organize, and reuse your most effective prompts with the Prompt Library extension for Open WebUI.
 
+![Prompt Library Screenshot](static/preview.png)
+
 ## Features
 
 - **Save Prompts**: Capture effective prompts directly from your conversations
@@ -12,10 +14,19 @@ Save, organize, and reuse your most effective prompts with the Prompt Library ex
 
 ## Installation
 
+### From Extension Manager
+
 1. Open the Extension Manager in Open WebUI (Settings > Extensions)
 2. Click on the "Marketplace" tab
 3. Find "Prompt Library" and click "Install"
 4. Restart Open WebUI if prompted
+
+### Manual Installation
+
+1. Download the extension package
+2. Extract to your Open WebUI extensions directory
+3. Restart Open WebUI
+4. Enable the extension in the Extension Manager
 
 ## Usage
 
@@ -39,15 +50,40 @@ Save, organize, and reuse your most effective prompts with the Prompt Library ex
 3. Click "Use Prompt" to insert it into the current conversation
 4. Or click "Copy" to copy the prompt to your clipboard
 
-### Managing Templates
+### Managing Categories
+
+The extension comes with default categories:
+- **General**: General-purpose prompts
+- **Writing**: Prompts for writing tasks
+- **Coding**: Prompts for programming tasks
+- **Research**: Prompts for research tasks
+
+You can also create your own custom categories.
+
+## Built-in Templates
 
 The extension includes pre-built templates for common tasks:
 
-- **Writing**: Essay outlines, story structures, content briefs
-- **Coding**: Code reviews, algorithm design, debugging assistance
-- **Research**: Literature reviews, data analysis, summarization
-- **Business**: Email templates, meeting summaries, reports
-- **Creative**: Art descriptions, character development, idea generation
+### Writing Templates
+- Essay outlines
+- Blog posts
+- Creative stories
+- Professional emails
+- Product descriptions
+
+### Coding Templates
+- Code reviews
+- Algorithm implementations
+- Debugging assistance
+- Code refactoring
+- Unit test generation
+
+### Research Templates
+- Literature reviews
+- Research methodology design
+- Research proposals
+- Data analysis plans
+- Research paper summaries
 
 ## Customization
 
@@ -58,11 +94,14 @@ Adjust the extension settings by clicking the gear icon in the Prompt Library in
 - **Auto-save**: Enable/disable automatic prompt saving
 - **Template Variables**: Customize default template variables
 
+## Import/Export
+
+- **Export**: Save your prompt collection as a JSON file to back up or share
+- **Import**: Load prompts from a JSON file (compatible with exported prompt collections)
+
 ## For Developers
 
 ### Extension Structure
-
-The extension follows the standard Open WebUI extension structure:
 
 ```
 prompt-library/
@@ -75,19 +114,20 @@ prompt-library/
 └── templates/                 # Pre-built prompt templates
 ```
 
-### Data Storage
+### API Endpoints
 
-Prompts are stored in the Open WebUI database using the extension storage API.
+The extension provides REST API endpoints for integrating with other extensions:
 
-## Roadmap
-
-Future updates will include:
-
-- **Collaborative sharing**: Share prompts with team members
-- **Version history**: Track changes to prompts over time
-- **Advanced templating**: More powerful template variables and conditionals
-- **AI-assisted prompt improvement**: Get suggestions for improving prompts
-- **Analytics**: Track prompt effectiveness and usage statistics
+- `GET /api/extensions/prompt-library/categories`: Get all categories
+- `POST /api/extensions/prompt-library/categories`: Create a new category
+- `GET /api/extensions/prompt-library/prompts`: Get all prompts
+- `GET /api/extensions/prompt-library/prompts/{id}`: Get a specific prompt
+- `POST /api/extensions/prompt-library/prompts`: Create a new prompt
+- `PUT /api/extensions/prompt-library/prompts/{id}`: Update a prompt
+- `DELETE /api/extensions/prompt-library/prompts/{id}`: Delete a prompt
+- `GET /api/extensions/prompt-library/templates`: Get prompt templates
+- `POST /api/extensions/prompt-library/export`: Export prompts
+- `POST /api/extensions/prompt-library/import`: Import prompts
 
 ## Support
 

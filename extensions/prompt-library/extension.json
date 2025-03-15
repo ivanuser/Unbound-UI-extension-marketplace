@@ -1,0 +1,34 @@
+{
+  "id": "prompt-library",
+  "name": "Prompt Library",
+  "description": "Save, organize, and reuse effective prompts with categories and templates",
+  "version": "0.1.0",
+  "author": "Open WebUI Team",
+  "license": "MIT",
+  "type": "ui",
+  "tags": ["prompts", "templates", "productivity"],
+  "category": "productivity",
+  "compatibility": {
+    "openWebUIVersion": ">=0.1.0"
+  },
+  "repository": "https://github.com/open-webui/prompt-library",
+  "bugs": {
+    "url": "https://github.com/open-webui/prompt-library/issues"
+  },
+  "homepage": "https://github.com/open-webui/prompt-library",
+  "entryPoint": "__init__.py",
+  "config": {
+    "sidebarIcon": "book-bookmark",
+    "sidebarLabel": "Prompt Library",
+    "defaultCategory": "general",
+    "allowExport": true,
+    "allowImport": true,
+    "maxPrompts": 100,
+    "showInChatInterface": true
+  },
+  "dependencies": [],
+  "permissions": [
+    "storage:read",
+    "storage:write"
+  ]
+}

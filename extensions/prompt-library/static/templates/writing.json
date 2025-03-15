@@ -1,0 +1,207 @@
+[
+  {
+    "id": "essay-outline",
+    "title": "Essay Outline",
+    "description": "Generate a structured outline for an essay on any topic",
+    "content": "Create a detailed essay outline for a [length] essay on the topic of \"[topic]\". Include an introduction with a compelling thesis statement, [number] main body paragraphs with key points and supporting evidence, and a conclusion. For each section, provide a brief description of what should be included.",
+    "category": "writing",
+    "tags": ["essay", "outline", "academic"],
+    "variables": [
+      {
+        "name": "topic",
+        "description": "The essay topic",
+        "default": "the impact of artificial intelligence on society"
+      },
+      {
+        "name": "length",
+        "description": "Essay length",
+        "default": "2000-word"
+      },
+      {
+        "name": "number",
+        "description": "Number of main paragraphs",
+        "default": "3-5"
+      }
+    ]
+  },
+  {
+    "id": "blog-post",
+    "title": "Blog Post",
+    "description": "Generate a complete blog post on any topic",
+    "content": "Write a [length] blog post about \"[topic]\" for an audience of [audience]. The tone should be [tone]. Structure the post with an engaging introduction, [number] key sections with subheadings, and a conclusion with a call to action. Include [specific] to make the content more valuable.",
+    "category": "writing",
+    "tags": ["blog", "content marketing", "writing"],
+    "variables": [
+      {
+        "name": "topic",
+        "description": "Blog post topic",
+        "default": "productivity tips for remote workers"
+      },
+      {
+        "name": "length",
+        "description": "Blog post length",
+        "default": "1000-1200 word"
+      },
+      {
+        "name": "audience",
+        "description": "Target audience",
+        "default": "professionals working from home"
+      },
+      {
+        "name": "tone",
+        "description": "Writing tone",
+        "default": "conversational yet informative"
+      },
+      {
+        "name": "number",
+        "description": "Number of sections",
+        "default": "5"
+      },
+      {
+        "name": "specific",
+        "description": "Specific elements to include",
+        "default": "practical examples, statistics, and actionable advice"
+      }
+    ]
+  },
+  {
+    "id": "creative-story",
+    "title": "Creative Story",
+    "description": "Generate a creative short story",
+    "content": "Write a [length] [genre] story with the following elements:\n\nMain character: [character]\nSetting: [setting]\nConflict: [conflict]\nTheme: [theme]\n\nThe story should have a clear beginning that introduces the character and setting, a middle that develops the conflict, and an ending that resolves the story in a [resolution] way. Use [style] writing style with vivid descriptions and engaging dialogue.",
+    "category": "writing",
+    "tags": ["creative", "fiction", "storytelling"],
+    "variables": [
+      {
+        "name": "length",
+        "description": "Story length",
+        "default": "1000-word"
+      },
+      {
+        "name": "genre",
+        "description": "Story genre",
+        "default": "science fiction"
+      },
+      {
+        "name": "character",
+        "description": "Main character description",
+        "default": "a brilliant scientist who discovers a way to communicate with parallel universes"
+      },
+      {
+        "name": "setting",
+        "description": "Story setting",
+        "default": "a near-future research facility in Antarctica"
+      },
+      {
+        "name": "conflict",
+        "description": "Main conflict",
+        "default": "the scientist accidentally opens a portal that threatens to merge realities"
+      },
+      {
+        "name": "theme",
+        "description": "Story theme",
+        "default": "the unforeseen consequences of scientific progress"
+      },
+      {
+        "name": "resolution",
+        "description": "Type of ending",
+        "default": "thought-provoking"
+      },
+      {
+        "name": "style",
+        "description": "Writing style",
+        "default": "descriptive and suspenseful"
+      }
+    ]
+  },
+  {
+    "id": "email-template",
+    "title": "Professional Email",
+    "description": "Create a professional email for any business purpose",
+    "content": "Write a professional email for the following purpose:\n\nFrom: [sender]\nTo: [recipient]\nSubject: [subject]\nPurpose: [purpose]\n\nThe email should have a professional greeting, clear body with [tone] tone, and an appropriate sign-off. The total length should be approximately [length] paragraphs.",
+    "category": "writing",
+    "tags": ["email", "business", "professional"],
+    "variables": [
+      {
+        "name": "sender",
+        "description": "Sender's name and position",
+        "default": "Alex Johnson, Marketing Manager at XYZ Corp"
+      },
+      {
+        "name": "recipient",
+        "description": "Recipient's name and position",
+        "default": "Sam Williams, CEO of ABC Company"
+      },
+      {
+        "name": "subject",
+        "description": "Email subject",
+        "default": "Proposal for Strategic Partnership Opportunity"
+      },
+      {
+        "name": "purpose",
+        "description": "Email purpose",
+        "default": "proposing a collaboration between our companies on an upcoming marketing campaign"
+      },
+      {
+        "name": "tone",
+        "description": "Email tone",
+        "default": "professional yet enthusiastic"
+      },
+      {
+        "name": "length",
+        "description": "Email length",
+        "default": "3-4"
+      }
+    ]
+  },
+  {
+    "id": "product-description",
+    "title": "Product Description",
+    "description": "Create compelling product descriptions for marketing",
+    "content": "Write a compelling [length] product description for [product], which is a [category] product that [main_benefit]. The target audience is [audience]. Include the following elements:\n\n1. An attention-grabbing headline\n2. A brief overview of what the product is\n3. [number] key features and their benefits\n4. Technical specifications (if relevant)\n5. A persuasive call to action\n\nUse a [tone] tone that will resonate with the target audience and highlight the product's unique selling points, such as [USP].",
+    "category": "writing",
+    "tags": ["marketing", "product", "copywriting"],
+    "variables": [
+      {
+        "name": "length",
+        "description": "Description length",
+        "default": "300-word"
+      },
+      {
+        "name": "product",
+        "description": "Product name",
+        "default": "AquaFresh Water Purifier Pro"
+      },
+      {
+        "name": "category",
+        "description": "Product category",
+        "default": "home appliance"
+      },
+      {
+        "name": "main_benefit",
+        "description": "Main product benefit",
+        "default": "provides clean, great-tasting water while removing 99.9% of contaminants"
+      },
+      {
+        "name": "audience",
+        "description": "Target audience",
+        "default": "health-conscious homeowners looking for affordable water purification solutions"
+      },
+      {
+        "name": "number",
+        "description": "Number of features to highlight",
+        "default": "4-5"
+      },
+      {
+        "name": "tone",
+        "description": "Writing tone",
+        "default": "confident and authoritative yet friendly"
+      },
+      {
+        "name": "USP",
+        "description": "Unique selling points",
+        "default": "eco-friendly filter technology, cost-effectiveness, and sleek design"
+      }
+    ]
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "code-review",
+    "title": "Code Review",
+    "description": "Get a comprehensive code review with improvement suggestions",
+    "content": "Please review the following [language] code for bugs, inefficiencies, potential improvements, and adherence to best practices. Provide specific feedback organized by category (functionality, performance, readability, security, etc.) and suggest concrete improvements. Also mention any positive aspects of the code.\n\n```[language]\n[code]\n```\n\nAfter your review, please provide a summary of the key findings and their relative importance (critical, important, minor).",
+    "category": "coding",
+    "tags": ["code review", "programming", "best practices"],
+    "variables": [
+      {
+        "name": "language",
+        "description": "Programming language",
+        "default": "Python"
+      },
+      {
+        "name": "code",
+        "description": "Code to review",
+        "default": "def calculate_factorial(n):\n    if n < 0:\n        return None\n    result = 1\n    for i in range(1, n+1):\n        result = result * i\n    return result"
+      }
+    ]
+  },
+  {
+    "id": "algorithm-implementation",
+    "title": "Algorithm Implementation",
+    "description": "Get an implementation of a specific algorithm in your language of choice",
+    "content": "Please implement the [algorithm] algorithm in [language]. The implementation should:\n\n1. Be well-commented to explain the logic\n2. Follow [language] best practices and coding standards\n3. Have a time complexity of approximately [complexity] if possible\n4. Include appropriate error handling and edge cases\n5. Provide example usage with sample inputs and outputs\n\nAdditionally, explain the key concepts and principles behind this algorithm, its typical use cases, and any tradeoffs compared to alternative approaches.",
+    "category": "coding",
+    "tags": ["algorithms", "implementation", "programming"],
+    "variables": [
+      {
+        "name": "algorithm",
+        "description": "Algorithm name",
+        "default": "binary search"
+      },
+      {
+        "name": "language",
+        "description": "Programming language",
+        "default": "Python"
+      },
+      {
+        "name": "complexity",
+        "description": "Time complexity",
+        "default": "O(log n)"
+      }
+    ]
+  },
+  {
+    "id": "debugging-help",
+    "title": "Debugging Help",
+    "description": "Get help identifying and fixing bugs in your code",
+    "content": "I'm having an issue with my [language] code. Here's what's happening:\n\n```[language]\n[code]\n```\n\nThe problem I'm experiencing: [problem]\n\nExpected behavior: [expected]\nActual behavior: [actual]\n\nEnvironment details:\n- Language/runtime version: [version]\n- Operating System: [os]\n- Any relevant libraries or frameworks: [libraries]\n\nPlease help me identify what's causing this bug, explain why it's happening, and provide a fixed version of the code with explanations of the changes made.",
+    "category": "coding",
+    "tags": ["debugging", "troubleshooting", "programming"],
+    "variables": [
+      {
+        "name": "language",
+        "description": "Programming language",
+        "default": "JavaScript"
+      },
+      {
+        "name": "code",
+        "description": "Problematic code",
+        "default": "function fetchUserData(userId) {\n  fetch(`https://api.example.com/users/${userId}`)\n    .then(response => response.json())\n    .then(data => {\n      displayUserProfile(data);\n    });\n}\n\nfunction displayUserProfile(userData) {\n  const profileDiv = document.getElementById('profile');\n  profileDiv.innerHTML = `\n    <h2>${userData.name}</h2>\n    <p>Email: ${userData.email}</p>\n    <p>Member since: ${userData.memberSince}</p>\n  `;\n}\n\nfetchUserData('123');"
+      },
+      {
+        "name": "problem",
+        "description": "Description of the problem",
+        "default": "Sometimes the user profile doesn't display, and I see a TypeError in the console about 'Cannot read property 'name' of undefined'"
+      },
+      {
+        "name": "expected",
+        "description": "Expected behavior",
+        "default": "The user profile should display with name, email, and membership date"
+      },
+      {
+        "name": "actual",
+        "description": "Actual behavior",
+        "default": "Intermittently fails with error: 'TypeError: Cannot read property 'name' of undefined'"
+      },
+      {
+        "name": "version",
+        "description": "Language/runtime version",
+        "default": "JavaScript ES6, Chrome 91"
+      },
+      {
+        "name": "os",
+        "description": "Operating system",
+        "default": "Windows 10"
+      },
+      {
+        "name": "libraries",
+        "description": "Relevant libraries",
+        "default": "No frameworks, just vanilla JavaScript"
+      }
+    ]
+  },
+  {
+    "id": "refactoring",
+    "title": "Code Refactoring",
+    "description": "Get help refactoring code to improve maintainability and performance",
+    "content": "Please help me refactor the following [language] code to make it more maintainable, efficient, and aligned with modern best practices. The current code works but has issues with [issues].\n\n```[language]\n[code]\n```\n\nSpecific goals for this refactoring:\n1. [goal1]\n2. [goal2]\n3. [goal3]\n\nPlease provide a refactored version with comments explaining the key changes and their benefits. Also include any trade-offs I should be aware of with your approach.",
+    "category": "coding",
+    "tags": ["refactoring", "code quality", "maintenance"],
+    "variables": [
+      {
+        "name": "language",
+        "description": "Programming language",
+        "default": "JavaScript"
+      },
+      {
+        "name": "code",
+        "description": "Code to refactor",
+        "default": "function processItems(items) {\n  var results = [];\n  for (var i = 0; i < items.length; i++) {\n    var item = items[i];\n    var temp;\n    if (item.type === 'type1') {\n      temp = doSomething(item.value);\n    } else if (item.type === 'type2') {\n      temp = doSomethingElse(item.value);\n    } else if (item.type === 'type3') {\n      temp = doAnotherThing(item.value);\n    } else {\n      temp = item.value;\n    }\n    results.push({\n      id: item.id,\n      processed: temp,\n      timestamp: new Date().getTime()\n    });\n  }\n  return results;\n}\n\nfunction doSomething(val) {\n  return val * 2;\n}\n\nfunction doSomethingElse(val) {\n  return val + 10;\n}\n\nfunction doAnotherThing(val) {\n  return val / 3;\n}"
+      },
+      {
+        "name": "issues",
+        "description": "Current code issues",
+        "default": "readability, maintainability, and not using modern JavaScript features"
+      },
+      {
+        "name": "goal1",
+        "description": "First refactoring goal",
+        "default": "Modernize the code using ES6+ features (arrow functions, const/let, etc.)"
+      },
+      {
+        "name": "goal2",
+        "description": "Second refactoring goal",
+        "default": "Improve the structure to make it more maintainable and easier to extend with new types"
+      },
+      {
+        "name": "goal3",
+        "description": "Third refactoring goal",
+        "default": "Apply functional programming principles where appropriate"
+      }
+    ]
+  },
+  {
+    "id": "unit-tests",
+    "title": "Unit Test Generation",
+    "description": "Generate comprehensive unit tests for your code",
+    "content": "Please write a comprehensive set of unit tests for the following [language] code using the [framework] testing framework. The tests should cover normal use cases, edge cases, error conditions, and achieve high code coverage.\n\n```[language]\n[code]\n```\n\nFor each test case, please include:\n1. A descriptive test name\n2. Setup of test conditions\n3. Execution of the function/method being tested\n4. Clear assertions with error messages\n5. Any necessary teardown\n\nAlso provide any mock objects or test data that would be needed to run these tests effectively. The goal is to verify that the code works as expected and to catch potential bugs or regressions.",
+    "category": "coding",
+    "tags": ["testing", "unit tests", "quality assurance"],
+    "variables": [
+      {
+        "name": "language",
+        "description": "Programming language",
+        "default": "JavaScript"
+      },
+      {
+        "name": "framework",
+        "description": "Testing framework",
+        "default": "Jest"
+      },
+      {
+        "name": "code",
+        "description": "Code to test",
+        "default": "/**\n * Validates and formats a user object\n * @param {Object} user - The user object to validate\n * @param {string} user.name - User's full name\n * @param {string} user.email - User's email address\n * @param {number} user.age - User's age in years\n * @returns {Object} Formatted user object or throws an error\n */\nfunction validateUser(user) {\n  if (!user) {\n    throw new Error('User object is required');\n  }\n  \n  if (!user.name || typeof user.name !== 'string') {\n    throw new Error('Valid name is required');\n  }\n  \n  if (!user.email || !/^\\S+@\\S+\\.\\S+$/.test(user.email)) {\n    throw new Error('Valid email is required');\n  }\n  \n  if (!user.age || typeof user.age !== 'number' || user.age < 18) {\n    throw new Error('User must be at least 18 years old');\n  }\n  \n  return {\n    name: user.name.trim(),\n    email: user.email.toLowerCase(),\n    age: Math.floor(user.age),\n    verified: false,\n    createdAt: new Date().toISOString()\n  };\n}"
+      }
+    ]
+  }
+]

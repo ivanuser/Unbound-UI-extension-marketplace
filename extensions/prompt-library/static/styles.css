@@ -1,0 +1,135 @@
+/* Prompt Library Extension Styles */
+
+.prompt-library-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+}
+
+.prompt-library-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  background-color: #e5e7eb;
+  color: #374151;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dark .prompt-library-tag {
+  background-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.prompt-library-content {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+.dark .prompt-library-content {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+.prompt-library-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  transition-property: background-color, border-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .prompt-library-button {
+  background-color: #374151;
+  color: #e5e7eb;
+  border-color: #4b5563;
+}
+
+.prompt-library-button:hover {
+  background-color: #e5e7eb;
+}
+
+.dark .prompt-library-button:hover {
+  background-color: #4b5563;
+}
+
+.prompt-library-button.primary {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.prompt-library-button.primary:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.dark .prompt-library-button.primary {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.dark .prompt-library-button.primary:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.prompt-library-button.danger {
+  background-color: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+
+.prompt-library-button.danger:hover {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+.dark .prompt-library-button.danger {
+  background-color: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+
+.dark .prompt-library-button.danger:hover {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Animation for loading */
+@keyframes promptLibraryPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.prompt-library-loading {
+  animation: promptLibraryPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
