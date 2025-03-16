@@ -11,11 +11,11 @@
   "compatibility": {
     "openWebUIVersion": ">=0.1.0"
   },
-  "repository": "https://github.com/open-webui/prompt-library",
+  "repository": "https://github.com/ivanuser/open-webui-extension-marketplace/tree/main/extensions/prompt-library",
   "bugs": {
-    "url": "https://github.com/open-webui/prompt-library/issues"
+    "url": "https://github.com/ivanuser/open-webui-extension-marketplace/issues"
   },
-  "homepage": "https://github.com/open-webui/prompt-library",
+  "homepage": "https://github.com/ivanuser/open-webui-extension-marketplace/tree/main/extensions/prompt-library",
   "entryPoint": "__init__.py",
   "config": {
     "sidebarIcon": "book-bookmark",
