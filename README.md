@@ -1,71 +1,46 @@
-# Open WebUI Extension Marketplace
+# Open-WebUI Extension Marketplace
 
-A central repository of extensions for [Open WebUI](https://github.com/open-webui/open-webui), allowing users to discover, install, and manage extensions through the Extension Manager.
+<p align="center">
+  <img src="assets/images/extensplace-logo.png" alt="Open-WebUI Extensplace" width="300" />
+</p>
 
-## About the Marketplace
+## Overview
 
-The Open WebUI Extension Marketplace provides:
+The Open-WebUI Extension Marketplace is a centralized repository for discovering, distributing, and managing extensions for Open-WebUI. This repository serves as both the backend API and extension registry for the marketplace.
 
-- A curated collection of extensions for enhancing Open WebUI
-- Simple discovery and installation of extensions
-- Categorization and tagging for easy browsing
-- Versioning and updates management
-- Community-driven extension ecosystem
+## Features
 
-## For Users
+- **Extension Discovery**: Browse and search for extensions by category and type
+- **Detailed Information**: View comprehensive information about each extension
+- **Versioning**: Manage extension versions and updates
+- **Categorization**: Organized by function and use case
+- **Ratings**: Community-driven ratings and reviews
 
-### Using the Marketplace
+## Repository Structure
 
-1. Open the Extension Manager in Open WebUI (Settings > Extensions)
-2. Click on the "Marketplace" tab
-3. Browse or search for extensions
-4. Click "Install" to add an extension to your Open WebUI instance
-
-### Popular Extensions
-
-- **Prompt Library**: Save, organize, and reuse effective prompts
-- **Theme Manager**: Customize the appearance of Open WebUI
-- **Model Adapters**: Connect to additional AI models
-- **Tool Extensions**: Add new capabilities to your AI assistants
-
-## For Developers
-
-### Adding Your Extension
-
-To add your extension to the marketplace:
-
-1. Fork this repository
-2. Create a new directory in `extensions/` with your extension name
-3. Add required files:
-   - `manifest.json`: Extension metadata
-   - `README.md`: Documentation and usage instructions
-   - `preview.png`: Screenshot or preview image
-   - `releases/latest.json`: Latest version information
-   - `releases/[version].zip`: Extension package
-4. Submit a pull request
-
-### Extension Requirements
-
-All extensions must:
-
-- Include complete documentation
-- Follow the [Extension Development Guidelines](https://github.com/open-webui/open-webui-extensions/docs/creating_extensions.md)
-- Use semantic versioning
-- Be compatible with the latest Open WebUI version
-- Pass basic security checks
-
-## API Usage
-
-The marketplace provides a JSON API for integration with the Extension Manager:
-
-- `api/v1/extensions.json`: Complete list of extensions
-- `api/v1/categories.json`: Available categories
-- `api/v1/featured.json`: Featured extensions
+```
+open-webui-extension-marketplace/
+├── api/                        # Marketplace API endpoints
+│   └── v1/                     # API version 1
+│       ├── extensions.json     # Extensions listing
+│       ├── categories.json     # Categories listing
+│       ├── featured.json       # Featured extensions
+│       └── search.json         # Search API
+├── extensions/                 # Extension directories
+│   └── {extension-id}/         # Individual extension
+│       ├── manifest.json       # Extension metadata
+│       ├── README.md           # Extension documentation
+│       ├── preview.png         # Extension preview image
+│       └── releases/           # Release packages
+│           ├── latest.json     # Latest release info
+│           └── {version}.zip   # Release package
+└── index.json                  # Marketplace index
+```
 
 ## Contributing
 
-Contributions to the Extension Marketplace are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting changes.
+If you want to publish your extension to the marketplace, please follow our [contribution guidelines](CONTRIBUTING.md).
 
 ## License
 
-This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
