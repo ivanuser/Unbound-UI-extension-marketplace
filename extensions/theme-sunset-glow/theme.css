@@ -1,0 +1,40 @@
+/*
+  Sunset Glow Theme - Example CSS
+  In a real ShadCN setup, you would primarily override HSL variables.
+  This file is illustrative for the extension concept.
+*/
+
+/* Example HSL values - these would be adapted for the :root or .dark selector in globals.css */
+/*
+  --background: 20 14% 4%; / * Deep orange-brown * /
+  --foreground: 30 60% 95%; / * Very light warm cream * /
+
+  --primary: 30 80% 60%; / * Vibrant orange * /
+  --primary-foreground: 20 14% 4%;
+
+  --accent: 0 70% 65%; / * Soft red/pink * /
+  --accent-foreground: 0 0% 100%;
+
+  --card: 25 15% 10%; / * Darker warm brown for cards * /
+  --card-foreground: 30 60% 95%;
+
+  --muted: 25 15% 15%;
+  --muted-foreground: 30 40% 70%;
+
+  --border: 25 15% 20%;
+  --input: 25 15% 18%;
+  --ring: 30 80% 60%;
+*/
+
+/* Example of how a specific component *could* be styled if not using pure HSL overrides */
+.sunset-glow-button {
+  background-color: #FF8C42; /* Vibrant Orange */
+  color: #402A2C; /* Dark Brown */
+  border: 1px solid #E85D04; /* Darker Orange */
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.sunset-glow-button:hover {
+  background-color: #E85D04;
+}

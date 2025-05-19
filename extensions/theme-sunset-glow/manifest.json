@@ -1,0 +1,10 @@
+{
+  "id": "theme-sunset-glow",
+  "title": "Sunset Glow Theme",
+  "description": "A warm and inviting theme inspired by the beautiful hues of a sunset. Perfect for a cozy Unbound UI experience.",
+  "author": "Honercloud",
+  "version": "1.0.0",
+  "type": "theme",
+  "previewImageUrl": "preview.png",
+  "mainFile": "theme.css"
+}
