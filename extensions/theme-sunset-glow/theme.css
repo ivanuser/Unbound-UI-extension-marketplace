@@ -21,4 +21,14 @@
   --border: 25 15% 20%;
   --input: 25 15% 18%;
   --ring: 30 80% 60%;
+  --light-background: 40 60% 95%;
+  --light-card: 38 50% 98%;
+  --light-popover: 42 55% 97%;
+  --light-muted: 36 30% 90%;
+  --light-accent: 30 80% 85%;
+  --dark-foreground: 20 10% 10%;
+  --dark-card-foreground: 18 12% 15%;
+  --dark-popover-foreground: 22 14% 12%;
+  --dark-muted-foreground: 16 8% 20%;
+  --dark-accent-foreground: 10 20% 25%;
 }
