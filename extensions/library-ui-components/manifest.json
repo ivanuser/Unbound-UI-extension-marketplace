@@ -1,0 +1,42 @@
+{
+  "id": "library-ui-components",
+  "title": "UnboundUI Component Library",
+  "description": "A comprehensive collection of reusable UI components, utilities, and React hooks for UnboundUI extensions. Includes buttons, modals, forms, charts, and advanced utilities for rapid extension development.",
+  "version": "1.0.0",
+  "author": "UnboundUI Team",
+  "email": "extensions@unboundui.dev",
+  "license": "MIT",
+  "type": "library",
+  "category": "development",
+  "tags": ["ui", "components", "library", "utilities", "react", "hooks", "development"],
+  "compatibility": {
+    "unboundUIVersion": ">=1.0.0",
+    "nodeVersion": ">=18.0.0"
+  },
+  "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+  "mainFile": "src/index.js",
+  "previewImageUrl": "preview.png",
+  "icon": "icon.png",
+  "keywords": ["unboundui", "library", "components", "react", "utilities"],
+  "permissions": {
+    "ui": {
+      "components": true,
+      "styling": true
+    }
+  },
+  "dependencies": {
+    "unboundui": ">=1.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "config": {
+    "componentCount": 25,
+    "hookCount": 15,
+    "utilityCount": 20,
+    "themeSupport": true,
+    "typescript": true
+  },
+  "downloads": 8700,
+  "averageRating": 4.9,
+  "ratingCount": 487
+}

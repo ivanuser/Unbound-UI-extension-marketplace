@@ -1,0 +1,23 @@
+{
+  "featured": [
+    {
+      "id": "library-ui-components",
+      "reason": "Most popular library with excellent ratings",
+      "badgeText": "Developer Favorite",
+      "badgeColor": "blue"
+    },
+    {
+      "id": "theme-ocean-breeze", 
+      "reason": "Highest rated theme with accessibility features",
+      "badgeText": "Top Rated",
+      "badgeColor": "gold"
+    },
+    {
+      "id": "tool-text-transformer",
+      "reason": "Essential productivity tool for text manipulation",
+      "badgeText": "Essential Tool",
+      "badgeColor": "green"
+    }
+  ],
+  "lastUpdated": "2024-01-15T10:00:00Z"
+}

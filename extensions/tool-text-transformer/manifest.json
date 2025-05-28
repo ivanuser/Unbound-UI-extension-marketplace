@@ -1,0 +1,42 @@
+{
+  "id": "tool-text-transformer",
+  "title": "Text Transformer Tool",
+  "description": "Advanced text transformation utilities for formatting, case conversion, markdown processing, and text manipulation. Includes 20+ transformation functions with batch processing and clipboard integration.",
+  "version": "1.0.0",
+  "author": "UnboundUI Team",
+  "email": "extensions@unboundui.dev",
+  "license": "MIT",
+  "type": "tool",
+  "category": "productivity",
+  "tags": ["text", "formatting", "transformation", "productivity", "utility", "clipboard"],
+  "compatibility": {
+    "unboundUIVersion": ">=1.0.0",
+    "nodeVersion": ">=18.0.0"
+  },
+  "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+  "mainFile": "src/index.js",
+  "previewImageUrl": "preview.png",
+  "icon": "icon.png",
+  "keywords": ["unboundui", "text", "transformer", "productivity", "utility"],
+  "permissions": {
+    "system": {
+      "clipboard": true
+    },
+    "ui": {
+      "toolbar": true,
+      "sidebar": true
+    }
+  },
+  "dependencies": {
+    "unboundui": ">=1.0.0"
+  },
+  "config": {
+    "transformationCount": 25,
+    "batchProcessing": true,
+    "clipboardIntegration": true,
+    "undoRedo": true
+  },
+  "downloads": 6200,
+  "averageRating": 4.7,
+  "ratingCount": 198
+}

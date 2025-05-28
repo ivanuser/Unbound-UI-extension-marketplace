@@ -1,86 +1,95 @@
-# Theme Manager Extension for Open WebUI
+# Theme Manager Extension
 
-Customize the appearance of Open WebUI with the Theme Manager extension. Apply pre-built themes or create your own to personalize your experience.
+Advanced theme management system for UnboundUI. Create, customize, and switch between themes with real-time preview. Includes a theme builder with color picker, typography controls, and component styling options.
 
 ## Features
 
-- **Theme Gallery**: Browse and apply a variety of pre-built themes
-- **Theme Editor**: Create and customize your own themes
-- **Component Styling**: Customize specific UI components
-- **Import/Export**: Share themes with others
-- **Scheduled Themes**: Apply themes based on time of day (light/dark)
+- **Theme Creation**: Build custom themes from scratch
+- **Real-time Preview**: See changes instantly as you edit
+- **Color Picker**: Advanced color selection tools
+- **Pre-built Themes**: Light, dark, and auto (system) themes included
+- **Theme Export/Import**: Share themes with the community
+- **Component Styling**: Fine-tune individual UI components
 
 ## Installation
 
-1. Open the Extension Manager in Open WebUI (Settings > Extensions)
-2. Click on the "Marketplace" tab
-3. Find "Theme Manager" and click "Install"
-4. Restart Open WebUI if prompted
+1. Open UnboundUI Extensions page
+2. Search for "Theme Manager Extension"
+3. Click "Install"
+4. Access theme manager via the settings menu
 
 ## Usage
 
-### Applying Themes
+### Basic Theme Switching
 
-1. Click on the "Theme Manager" icon in the sidebar
-2. Browse available themes in the gallery
-3. Click "Apply" to activate a theme
+```javascript
+// Apply a theme
+themeManager.applyTheme('dark');
 
-### Creating Custom Themes
+// Get all available themes
+const themes = themeManager.getAllThemes();
 
-1. In the Theme Manager, click "Create New Theme"
-2. Use the visual editor to customize colors, fonts, and spacing
-3. Preview changes in real-time
-4. Save your theme with a name and description
-
-## Included Themes
-
-The extension comes with several pre-built themes:
-
-- **Modern Light**: Clean, minimal light theme
-- **Modern Dark**: Dark variant of the Modern theme
-- **Retro Terminal**: Nostalgic terminal-inspired theme
-- **Ocean Blue**: Calm, blue-tinted theme
-- **Forest Green**: Nature-inspired green theme
-- **High Contrast**: Accessibility-focused theme
-
-## For Developers
-
-### Creating Theme Packages
-
-You can create shareable theme packages using the following structure:
-
-```json
-{
-  "name": "My Custom Theme",
-  "description": "A custom theme for Open WebUI",
-  "author": "Your Name",
-  "version": "1.0.0",
-  "colors": {
-    "primary": "#3b82f6",
-    "secondary": "#10b981",
-    "background": "#ffffff",
-    "text": "#1f2937"
-    // Additional color variables
-  },
-  "fonts": {
-    "body": "Inter, sans-serif",
-    "heading": "Inter, sans-serif",
-    "code": "Fira Code, monospace"
-  },
-  "components": {
-    // Component-specific styling
-  }
-}
+// Create custom theme
+const customThemeId = themeManager.createCustomTheme('My Theme', {
+  primary: '#ff6b6b',
+  secondary: '#4ecdc4',
+  background: '#2c3e50',
+  surface: '#34495e',
+  text: '#ecf0f1'
+});
 ```
 
-## Support
+### Theme Creation
 
-If you encounter any issues or have suggestions, please:
+1. Click "Create New Theme" in the theme manager
+2. Choose a base theme or start from scratch
+3. Use the color picker to customize colors
+4. Preview changes in real-time
+5. Save and apply your custom theme
 
-1. Check the [GitHub Issues](https://github.com/open-webui/theme-manager/issues)
-2. Submit a new issue if needed
-3. Join the [Open WebUI Discord](https://discord.gg/openwebui) for community support
+### Color Customization
+
+The theme manager provides controls for:
+- **Primary Colors**: Main brand colors
+- **Secondary Colors**: Accent and highlight colors
+- **Background Colors**: Page and component backgrounds
+- **Text Colors**: Various text hierarchies
+- **Border Colors**: Borders and dividers
+
+### Advanced Features
+
+- **Typography Settings**: Font families, sizes, and weights
+- **Spacing Controls**: Margins, padding, and layout spacing
+- **Border Radius**: Corner rounding for components
+- **Shadow Settings**: Drop shadows and elevation
+- **Animation Timing**: Transition and animation speeds
+
+## Default Themes
+
+### Light Theme
+Clean, bright theme perfect for daytime use with high contrast and excellent readability.
+
+### Dark Theme
+Eye-friendly dark theme designed for low-light environments and extended use.
+
+### Auto Theme
+Automatically switches between light and dark themes based on your system preferences.
+
+## Creating Custom Themes
+
+1. Start with a base theme
+2. Modify colors using the color picker
+3. Adjust typography and spacing
+4. Preview across different components
+5. Export for sharing or backup
+
+## Accessibility
+
+All themes created with the theme manager are tested for:
+- **WCAG Contrast Requirements**: Ensuring readable text
+- **Color Blindness Support**: Compatible with various color vision types
+- **High Contrast Mode**: Support for system accessibility settings
 
 ## License
 
-This extension is released under the MIT License.
+MIT License - see LICENSE file for details.
