@@ -1,7 +1,7 @@
 # UnboundUI Extension Marketplace
 
 <p align="center">
-  <img src="assets/images/unboundui-logo.png" alt="UnboundUI Extension Marketplace" width="300" />
+  <img src="assets/images/extensplace-logo.png" alt="UnboundUI Extension Marketplace" width="300" />
 </p>
 
 ## Overview
