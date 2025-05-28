@@ -22,14 +22,10 @@
       "ui": {
         "themes": true,
         "colorScheme": true
-      }
-    },
+      }    },
     "dependencies": {
       "unboundui": ">=1.0.0"
-    },
-    "downloads": 2890,
-    "averageRating": 4.5,
-    "ratingCount": 127
+    }
   },
   {
     "id": "code-interpreter",
@@ -59,14 +55,10 @@
       "filesystem": { 
         "read": ["workspace/temp"],
         "write": ["workspace/temp"] 
-      }
-    },
+      }    },
     "dependencies": {
       "unboundui": ">=1.0.0"
-    },
-    "downloads": 1250,
-    "averageRating": 4.6,
-    "ratingCount": 89
+    }
   },
   {
     "id": "prompt-library",
@@ -91,14 +83,10 @@
       "filesystem": { 
         "read": ["workspace/prompts"] 
       },
-      "network": false
-    },
+      "network": false    },
     "dependencies": {
       "unboundui": ">=1.0.0"
-    },
-    "downloads": 2100,
-    "averageRating": 4.8,
-    "ratingCount": 156
+    }
   },
   {
     "id": "theme-manager",
@@ -129,14 +117,10 @@
         "colorPicker": true,
         "styleEditor": true
       },
-      "network": false
-    },
+      "network": false    },
     "dependencies": {
       "unboundui": ">=1.0.0"
-    },
-    "downloads": 3200,
-    "averageRating": 4.7,
-    "ratingCount": 234
+    }
   },
   {
     "id": "theme-ocean-breeze",
@@ -161,14 +145,10 @@
       "ui": {
         "themes": true,
         "colorScheme": true
-      }
-    },
+      }    },
     "dependencies": {
       "unboundui": ">=1.0.0"
-    },
-    "downloads": 4500,
-    "averageRating": 4.8,
-    "ratingCount": 312
+    }
   },
   {
     "id": "library-ui-components",
@@ -194,16 +174,12 @@
       "ui": {
         "components": true,
         "styling": true
-      }
-    },
+      }    },
     "dependencies": {
       "unboundui": ">=1.0.0",
       "react": ">=18.0.0",
       "react-dom": ">=18.0.0"
-    },
-    "downloads": 8700,
-    "averageRating": 4.9,
-    "ratingCount": 487
+    }
   },
   {
     "id": "tool-text-transformer",
@@ -232,13 +208,9 @@
       "ui": {
         "toolbar": true,
         "sidebar": true
-      }
-    },
+      }    },
     "dependencies": {
       "unboundui": ">=1.0.0"
-    },
-    "downloads": 6200,
-    "averageRating": 4.7,
-    "ratingCount": 198
+    }
   }
 ]

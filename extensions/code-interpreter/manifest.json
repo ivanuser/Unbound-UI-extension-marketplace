@@ -30,13 +30,9 @@
   },
   "dependencies": {
     "unboundui": ">=1.0.0"
-  },
-  "config": {
+  },  "config": {
     "supportedLanguages": ["python", "javascript", "typescript", "bash"],
     "timeout": 30000,
     "memoryLimit": "128MB"
-  },
-  "downloads": 1250,
-  "averageRating": 4.6,
-  "ratingCount": 89
+  }
 }

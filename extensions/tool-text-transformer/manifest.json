@@ -29,14 +29,10 @@
   },
   "dependencies": {
     "unboundui": ">=1.0.0"
-  },
-  "config": {
+  },  "config": {
     "transformationCount": 25,
     "batchProcessing": true,
     "clipboardIntegration": true,
     "undoRedo": true
-  },
-  "downloads": 6200,
-  "averageRating": 4.7,
-  "ratingCount": 198
+  }
 }

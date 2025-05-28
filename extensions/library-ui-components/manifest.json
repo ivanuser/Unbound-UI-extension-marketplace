@@ -27,16 +27,12 @@
   "dependencies": {
     "unboundui": ">=1.0.0",
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
-  },
+    "react-dom": ">=18.0.0"  },
   "config": {
     "componentCount": 25,
     "hookCount": 15,
     "utilityCount": 20,
     "themeSupport": true,
     "typescript": true
-  },
-  "downloads": 8700,
-  "averageRating": 4.9,
-  "ratingCount": 487
+  }
 }

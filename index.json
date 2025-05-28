@@ -7,21 +7,21 @@
   "totalExtensions": 7,
   "categories": [
     "ui",
-    "productivity", 
+    "productivity",
     "development",
     "ai",
     "integration"
   ],
   "extensionTypes": [
     "theme",
-    "tool", 
+    "tool",
     "library",
     "code-interpreter",
     "prompt-templates"
   ],
   "apis": {
     "extensions": "/api/marketplace-api-extensions.json",
-    "categories": "/api/marketplace-api-categories.json", 
+    "categories": "/api/marketplace-api-categories.json",
     "featured": "/api/marketplace-api-featured.json"
   },
   "featuredExtensions": [
@@ -30,12 +30,6 @@
     "theme-manager",
     "tool-text-transformer"
   ],
-  "qualityMetrics": {
-    "averageScore": 95,
-    "minimumScore": 80,
-    "totalTested": 7,
-    "passRate": "100%"
-  },
   "availableExtensions": [
     {
       "id": "theme-sunset-glow",
@@ -44,14 +38,14 @@
       "category": "ui"
     },
     {
-      "id": "code-interpreter", 
+      "id": "code-interpreter",
       "name": "Code Interpreter Extension",
       "type": "code-interpreter",
       "category": "development"
     },
     {
       "id": "prompt-library",
-      "name": "Prompt Template Library", 
+      "name": "Prompt Template Library",
       "type": "prompt-templates",
       "category": "productivity"
     },
@@ -64,7 +58,7 @@
     {
       "id": "theme-ocean-breeze",
       "name": "Ocean Breeze Theme",
-      "type": "theme", 
+      "type": "theme",
       "category": "ui"
     },
     {
@@ -74,7 +68,7 @@
       "category": "development"
     },
     {
-      "id": "tool-text-transformer", 
+      "id": "tool-text-transformer",
       "name": "Text Transformer Tool",
       "type": "tool",
       "category": "productivity"

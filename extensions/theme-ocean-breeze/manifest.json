@@ -27,11 +27,7 @@
     "unboundui": ">=1.0.0"
   },
   "config": {
-    "configurable": true,
-    "darkModeSupport": true,
+    "configurable": true,    "darkModeSupport": true,
     "accessibilityOptimized": true
-  },
-  "downloads": 4500,
-  "averageRating": 4.8,
-  "ratingCount": 312
+  }
 }
