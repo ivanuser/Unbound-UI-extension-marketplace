@@ -1,32 +1,89 @@
 {
-  "name": "Unbound UI Extension Marketplace",
-  "description": "A central repository of extensions for Unbound UI",
+  "name": "UnboundUI Extension Marketplace",
+  "description": "A central repository of high-quality extensions for UnboundUI",
   "version": "1.0.0",
   "apiVersion": "v1",
-  "lastUpdated": "2025-04-18T12:00:00Z",
-  "totalExtensions": 3,
+  "lastUpdated": "2025-05-28T16:00:00Z",
+  "totalExtensions": 7,
   "categories": [
     "ui",
-    "api",
-    "model-adapter",
-    "tool",
-    "theme"
+    "productivity", 
+    "development",
+    "ai",
+    "integration"
+  ],
+  "extensionTypes": [
+    "theme",
+    "tool", 
+    "library",
+    "code-interpreter",
+    "prompt-templates"
   ],
   "apis": {
-    "extensions": "/api/v1/extensions.json",
-    "categories": "/api/v1/categories.json",
-    "featured": "/api/v1/featured.json",
-    "search": "/api/v1/search.json"
+    "extensions": "/api/marketplace-api-extensions.json",
+    "categories": "/api/marketplace-api-categories.json", 
+    "featured": "/api/marketplace-api-featured.json"
   },
   "featuredExtensions": [
-    "prompt-library",
+    "theme-ocean-breeze",
+    "code-interpreter",
     "theme-manager",
-    "code-interpreter"
+    "tool-text-transformer"
+  ],
+  "qualityMetrics": {
+    "averageScore": 95,
+    "minimumScore": 80,
+    "totalTested": 7,
+    "passRate": "100%"
+  },
+  "availableExtensions": [
+    {
+      "id": "theme-sunset-glow",
+      "name": "Sunset Glow Theme",
+      "type": "theme",
+      "category": "ui"
+    },
+    {
+      "id": "code-interpreter", 
+      "name": "Code Interpreter Extension",
+      "type": "code-interpreter",
+      "category": "development"
+    },
+    {
+      "id": "prompt-library",
+      "name": "Prompt Template Library", 
+      "type": "prompt-templates",
+      "category": "productivity"
+    },
+    {
+      "id": "theme-manager",
+      "name": "Theme Manager Extension",
+      "type": "tool",
+      "category": "ui"
+    },
+    {
+      "id": "theme-ocean-breeze",
+      "name": "Ocean Breeze Theme",
+      "type": "theme", 
+      "category": "ui"
+    },
+    {
+      "id": "library-ui-components",
+      "name": "UnboundUI Component Library",
+      "type": "library",
+      "category": "development"
+    },
+    {
+      "id": "tool-text-transformer", 
+      "name": "Text Transformer Tool",
+      "type": "tool",
+      "category": "productivity"
+    }
   ],
   "maintainers": [
     {
-      "name": "Unbound UI Team",
-      "url": "https://github.com/open-webui"
+      "name": "UnboundUI Team",
+      "url": "https://github.com/ivanuser"
     }
   ],
   "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
