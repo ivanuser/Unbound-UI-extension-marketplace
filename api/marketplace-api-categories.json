@@ -1,41 +1,27 @@
 {
   "categories": [
     {
-      "id": "theme",
-      "name": "Themes",
-      "description": "Visual themes and color schemes for UnboundUI",
+      "id": "ui",
+      "name": "User Interface",
+      "description": "Themes and UI enhancements for UnboundUI",
       "icon": "🎨",
+      "count": 3
+    },
+    {
+      "id": "productivity",
+      "name": "Productivity",
+      "description": "Tools and templates to boost your productivity",
+      "icon": "⚡",
       "count": 2
     },
     {
-      "id": "tool", 
-      "name": "Tools",
-      "description": "Functional extensions that add new capabilities",
-      "icon": "🔧",
-      "count": 2
-    },
-    {
-      "id": "library",
-      "name": "Libraries", 
-      "description": "Reusable components and utilities for extension development",
-      "icon": "📚",
-      "count": 1
-    },
-    {
-      "id": "code-interpreter",
-      "name": "Code Interpreters",
-      "description": "Code execution environments for various programming languages",
+      "id": "development",
+      "name": "Development",
+      "description": "Tools and libraries for developers and extension creators",
       "icon": "💻",
-      "count": 1
-    },
-    {
-      "id": "prompt-templates",
-      "name": "Prompt Templates",
-      "description": "Pre-configured prompts and conversation starters",
-      "icon": "💬",
-      "count": 1
+      "count": 2
     }
   ],
   "totalExtensions": 7,
-  "lastUpdated": "2024-01-15T10:00:00Z"
+  "lastUpdated": "2025-05-28T16:00:00Z"
 }

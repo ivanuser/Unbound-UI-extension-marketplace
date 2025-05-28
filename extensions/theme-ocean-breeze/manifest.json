@@ -1,33 +1,10 @@
 {
   "id": "theme-ocean-breeze",
   "title": "Ocean Breeze Theme",
-  "description": "A calming blue and teal theme inspired by ocean waves and sea breeze. Perfect for long coding sessions with its easy-on-the-eyes color palette and professional appearance.",
-  "version": "1.0.0",
+  "description": "A calming blue and teal theme inspired by ocean waves and sea breeze. Perfect for long coding sessions with its easy-on-the-eyes color palette.",
   "author": "UnboundUI Team",
-  "email": "extensions@unboundui.dev",
-  "license": "MIT",
+  "version": "1.0.0",
   "type": "theme",
-  "category": "ui",
-  "tags": ["blue", "teal", "ocean", "calming", "professional", "accessibility"],
-  "compatibility": {
-    "unboundUIVersion": ">=1.0.0"
-  },
-  "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
-  "mainFile": "src/theme.css",
   "previewImageUrl": "preview.png",
-  "icon": "icon.png",
-  "keywords": ["unboundui", "theme", "ocean", "blue", "calming"],
-  "permissions": {
-    "ui": {
-      "themes": true,
-      "colorScheme": true
-    }
-  },
-  "dependencies": {
-    "unboundui": ">=1.0.0"
-  },
-  "config": {
-    "configurable": true,    "darkModeSupport": true,
-    "accessibilityOptimized": true
-  }
+  "mainFile": "theme.css"
 }
