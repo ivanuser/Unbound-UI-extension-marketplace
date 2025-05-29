@@ -12,7 +12,6 @@ class ThemeManager {
     this.styleEditor = null;
     this.loadDefaultThemes();
   }
-
   /**
    * Initialize the theme manager
    */
@@ -134,7 +133,6 @@ class ThemeManager {
 
     return themeId;
   }
-
   /**
    * Register theme management commands
    */
@@ -427,7 +425,6 @@ class ThemeManager {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     this.applyTheme(prefersDark ? 'dark' : 'light');
   }
-
   /**
    * Get all themes
    */
