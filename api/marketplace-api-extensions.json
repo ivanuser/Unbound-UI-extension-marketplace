@@ -207,11 +207,11 @@
     "permissions": {
       "system": {
         "clipboard": true
-      },
-      "ui": {
+      },      "ui": {
         "toolbar": true,
         "sidebar": true
-      }    },
+      }
+    },
     "dependencies": {
       "unboundui": ">=1.0.0"
     }
