@@ -51,11 +51,11 @@
         "process": true,
         "sandbox": true 
       },
-      "network": false,
-      "filesystem": { 
+      "network": false,      "filesystem": { 
         "read": ["workspace/temp"],
         "write": ["workspace/temp"] 
-      }    },
+      }
+    },
     "dependencies": {
       "unboundui": ">=1.0.0"
     }
@@ -78,12 +78,12 @@
     "mainFile": "src/library.js",
     "previewImageUrl": "preview.png",
     "icon": "icon.png",
-    "keywords": ["unboundui", "prompt-templates", "productivity", "ai"],
-    "permissions": {
+    "keywords": ["unboundui", "prompt-templates", "productivity", "ai"],    "permissions": {
       "filesystem": { 
         "read": ["workspace/prompts"] 
       },
-      "network": false    },
+      "network": false
+    },
     "dependencies": {
       "unboundui": ">=1.0.0"
     }
@@ -111,16 +111,19 @@
       "filesystem": { 
         "read": ["themes", "workspace/themes"],
         "write": ["themes", "workspace/themes"] 
-      },
-      "ui": {
+      },      "ui": {
         "themes": true,
         "colorPicker": true,
         "styleEditor": true
       },
-      "network": false    },
+      "network": false
+    },
     "dependencies": {
       "unboundui": ">=1.0.0"
-    }
+    },
+    "downloads": 3200,
+    "averageRating": 4.7,
+    "ratingCount": 234
   },
   {
     "id": "theme-ocean-breeze",
@@ -139,13 +142,13 @@
     "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
     "mainFile": "src/theme.css",
     "previewImageUrl": "preview.png",
-    "icon": "icon.png",
-    "keywords": ["unboundui", "theme", "ocean", "blue", "calming"],
+    "icon": "icon.png",    "keywords": ["unboundui", "theme", "ocean", "blue", "calming"],
     "permissions": {
       "ui": {
         "themes": true,
         "colorScheme": true
-      }    },
+      }
+    },
     "dependencies": {
       "unboundui": ">=1.0.0"
     }

@@ -30,11 +30,15 @@
     "network": false
   },
   "dependencies": {
-    "unboundui": ">=1.0.0"  },
+    "unboundui": ">=1.0.0"
+  },
   "config": {
     "defaultThemes": ["light", "dark", "auto"],
     "customThemeSupport": true,
     "realTimePreview": true,
     "colorPickerEnabled": true
-  }
+  },
+  "downloads": 3200,
+  "averageRating": 4.7,
+  "ratingCount": 234
 }
