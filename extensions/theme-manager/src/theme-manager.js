@@ -10,20 +10,52 @@ class ThemeManager {
     this.isInitialized = false;
     this.colorPicker = null;
     this.styleEditor = null;
+    this.id = 'theme-manager'; // Add explicit ID
     this.loadDefaultThemes();
+    
+    console.log('[ThemeManager] Constructor called');
+    
+    // Initialize when unboundUI is available
+    this.waitForUnboundUI();
   }
+  
+  /**
+   * Wait for unboundUI global object to be available
+   */
+  async waitForUnboundUI() {
+    console.log('[ThemeManager] Waiting for unboundUI...');
+    
+    const checkForUnboundUI = () => {
+      if (typeof unboundUI !== 'undefined') {
+        console.log('[ThemeManager] unboundUI found, initializing...');
+        this.initialize();
+      } else {
+        console.log('[ThemeManager] unboundUI not yet available, retrying...');
+        setTimeout(checkForUnboundUI, 100);
+      }
+    };
+    
+    checkForUnboundUI();
+  }
+  
   /**
    * Initialize the theme manager
    */
   async initialize() {
     try {
+      console.log('[ThemeManager] Initialize called');
+      
       if (typeof unboundUI !== 'undefined') {
+        console.log('[ThemeManager] Registering extension...');
         unboundUI.registerExtension(this);
         this.isInitialized = true;
         unboundUI.logger.info('Theme Manager extension initialized');
+        console.log('[ThemeManager] Extension registered successfully');
+      } else {
+        console.error('[ThemeManager] unboundUI is not available');
       }
     } catch (error) {
-      console.error('Failed to initialize Theme Manager:', error);
+      console.error('[ThemeManager] Failed to initialize:', error);
     }
   }
 
@@ -31,32 +63,38 @@ class ThemeManager {
    * Called when the extension is activated
    */
   async activate(context) {
+    console.log('[ThemeManager] Activate called with context:', context);
+    
     this.context = context;
     this.setupUI();
     
     // Register theme management commands
     this.registerCommands();
     
-    console.log('Theme Manager extension activated');
+    console.log('[ThemeManager] Extension activated successfully');
   }
 
   /**
    * Called when the extension is deactivated
    */
   async deactivate() {
+    console.log('[ThemeManager] Deactivate called');
+    
     // Cleanup UI elements
     if (this.context) {
       this.context.removeToolbarButton('theme-manager');
       this.context.removeSidebarPanel('theme-manager-panel');
     }
     
-    console.log('Theme Manager extension deactivated');
+    console.log('[ThemeManager] Extension deactivated');
   }
 
   /**
    * Load default themes
    */
   loadDefaultThemes() {
+    console.log('[ThemeManager] Loading default themes...');
+    
     this.themes.set('light', {
       name: 'Light Theme',
       colors: {
@@ -83,12 +121,16 @@ class ThemeManager {
       name: 'Auto (System)',
       colors: null // Uses system preference
     });
+    
+    console.log('[ThemeManager] Default themes loaded:', this.themes.size);
   }
 
   /**
    * Apply theme
    */
   applyTheme(themeId) {
+    console.log('[ThemeManager] Applying theme:', themeId);
+    
     const theme = this.themes.get(themeId);
     if (!theme) {
       throw new Error(`Theme not found: ${themeId}`);
@@ -106,6 +148,8 @@ class ThemeManager {
     if (typeof unboundUI !== 'undefined') {
       unboundUI.events.emit('theme-changed', { themeId, theme });
     }
+    
+    console.log('[ThemeManager] Theme applied successfully:', themeId);
   }
 
   /**
@@ -133,10 +177,13 @@ class ThemeManager {
 
     return themeId;
   }
+  
   /**
    * Register theme management commands
    */
   registerCommands() {
+    console.log('[ThemeManager] Registering commands...');
+    
     const commands = {
       'theme.manager.open': this.openThemeManager.bind(this),
       'theme.apply': this.applyTheme.bind(this),
@@ -150,94 +197,115 @@ class ThemeManager {
     Object.entries(commands).forEach(([id, handler]) => {
       this.context.registerCommand(id, handler);
     });
+    
+    console.log('[ThemeManager] Commands registered:', Object.keys(commands).length);
   }
 
   /**
    * Setup theme manager UI
    */
   setupUI() {
-    // Add toolbar button for quick access
-    this.context.addToolbarButton({
-      id: 'theme-manager',
-      label: 'Theme Manager',
-      icon: 'palette',
-      tooltip: 'Open Advanced Theme Manager',
-      onClick: this.openThemeManager.bind(this)
-    });
+    console.log('[ThemeManager] Setting up UI...');
+    
+    try {
+      // Add toolbar button for quick access
+      console.log('[ThemeManager] Adding toolbar button...');
+      this.context.addToolbarButton({
+        id: 'theme-manager',
+        label: 'Theme Manager',
+        icon: 'palette',
+        tooltip: 'Open Advanced Theme Manager',
+        onClick: this.openThemeManager.bind(this)
+      });
+      console.log('[ThemeManager] Toolbar button added');
 
-    // Add sidebar panel for theme management
-    this.context.addSidebarPanel({
-      id: 'theme-manager-panel',
-      title: 'Theme Manager',
-      icon: 'palette',
-      component: this.createSidebarPanel()
-    });
+      // Add sidebar panel for theme management
+      console.log('[ThemeManager] Adding sidebar panel...');
+      this.context.addSidebarPanel({
+        id: 'theme-manager-panel',
+        title: 'Theme Manager',
+        icon: 'palette',
+        component: this.createSidebarPanel()
+      });
+      console.log('[ThemeManager] Sidebar panel added');
 
-    // Add context menu items
-    this.context.addContextMenuItem({
-      id: 'theme-manager-menu',
-      label: 'Theme Manager',
-      icon: 'palette',
-      submenu: [
-        { id: 'theme-open-manager', label: 'Open Theme Manager', command: 'theme.manager.open' },
-        { id: 'theme-create-new', label: 'Create New Theme', command: 'theme.create' },
-        { separator: true },
-        { id: 'theme-apply-light', label: 'Apply Light Theme', command: 'theme.apply', args: ['light'] },
-        { id: 'theme-apply-dark', label: 'Apply Dark Theme', command: 'theme.apply', args: ['dark'] },
-        { id: 'theme-apply-auto', label: 'Apply Auto Theme', command: 'theme.apply', args: ['auto'] }
-      ]
-    });
+      // Add context menu items
+      console.log('[ThemeManager] Adding context menu...');
+      this.context.addContextMenuItem({
+        id: 'theme-manager-menu',
+        label: 'Theme Manager',
+        icon: 'palette',
+        submenu: [
+          { id: 'theme-open-manager', label: 'Open Theme Manager', command: 'theme.manager.open' },
+          { id: 'theme-create-new', label: 'Create New Theme', command: 'theme.create' },
+          { separator: true },
+          { id: 'theme-apply-light', label: 'Apply Light Theme', command: 'theme.apply', args: ['light'] },
+          { id: 'theme-apply-dark', label: 'Apply Dark Theme', command: 'theme.apply', args: ['dark'] },
+          { id: 'theme-apply-auto', label: 'Apply Auto Theme', command: 'theme.apply', args: ['auto'] }
+        ]
+      });
+      console.log('[ThemeManager] Context menu added');
 
-    // Initialize UI components
-    this.setupColorPicker();
-    this.setupStyleEditor();
+      // Initialize UI components
+      this.setupColorPicker();
+      this.setupStyleEditor();
+      
+      console.log('[ThemeManager] UI setup completed successfully');
+    } catch (error) {
+      console.error('[ThemeManager] Error setting up UI:', error);
+    }
   }
 
   /**
    * Create sidebar panel component for theme management
    */
   createSidebarPanel() {
+    console.log('[ThemeManager] Creating sidebar panel component...');
+    
     return {
-      render: () => `
-        <div class="theme-manager-panel">
-          <div class="theme-selector">
-            <h3>Available Themes</h3>
-            <div class="theme-list" id="theme-list">
-              ${this.renderThemeList()}
-            </div>
-          </div>
-          
-          <div class="theme-actions">
-            <button class="btn btn-primary" data-command="theme.create">
-              <i class="icon-plus"></i> Create Theme
-            </button>
-            <button class="btn btn-outline" data-command="theme.manager.open">
-              <i class="icon-edit"></i> Advanced Editor
-            </button>
-          </div>
-          
-          <div class="quick-colors">
-            <h3>Quick Color Adjustment</h3>
-            <div class="color-controls">
-              <div class="color-input">
-                <label>Primary Color</label>
-                <input type="color" id="primary-color" value="#3b82f6" data-property="primary">
-              </div>
-              <div class="color-input">
-                <label>Background</label>
-                <input type="color" id="background-color" value="#ffffff" data-property="background">
+      render: () => {
+        console.log('[ThemeManager] Rendering sidebar panel...');
+        return `
+          <div class="theme-manager-panel">
+            <div class="theme-selector">
+              <h3>Available Themes</h3>
+              <div class="theme-list" id="theme-list">
+                ${this.renderThemeList()}
               </div>
             </div>
-          </div>
-          
-          <div class="theme-info">
-            <h3>Current Theme</h3>
-            <div id="current-theme-info">
-              ${this.renderCurrentThemeInfo()}
+            
+            <div class="theme-actions">
+              <button class="btn btn-primary" data-command="theme.create">
+                <i class="icon-plus"></i> Create Theme
+              </button>
+              <button class="btn btn-outline" data-command="theme.manager.open">
+                <i class="icon-edit"></i> Advanced Editor
+              </button>
+            </div>
+            
+            <div class="quick-colors">
+              <h3>Quick Color Adjustment</h3>
+              <div class="color-controls">
+                <div class="color-input">
+                  <label>Primary Color</label>
+                  <input type="color" id="primary-color" value="#3b82f6" data-property="primary">
+                </div>
+                <div class="color-input">
+                  <label>Background</label>
+                  <input type="color" id="background-color" value="#ffffff" data-property="background">
+                </div>
+              </div>
+            </div>
+            
+            <div class="theme-info">
+              <h3>Current Theme</h3>
+              <div id="current-theme-info">
+                ${this.renderCurrentThemeInfo()}
+              </div>
             </div>
           </div>
-        </div>
-      `,
+        `;
+      },
       
       events: {
         'click [data-command]': (event) => {
@@ -425,6 +493,7 @@ class ThemeManager {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     this.applyTheme(prefersDark ? 'dark' : 'light');
   }
+  
   /**
    * Get all themes
    */
@@ -436,6 +505,8 @@ class ThemeManager {
    * Open main theme manager interface
    */
   async openThemeManager() {
+    console.log('[ThemeManager] Opening theme manager dialog...');
+    
     this.context.showDialog({
       title: 'Theme Manager',
       component: 'ThemeManagerDialog',
@@ -686,24 +757,15 @@ class ThemeManager {
   createThemeId(name) {
     return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   }
-
-  /**
-   * Extension lifecycle methods
-   */
-  activate() {
-    unboundUI.logger.info('Theme Manager extension activated');
-  }
-
-  deactivate() {
-    unboundUI.logger.info('Theme Manager extension deactivated');
-  }
 }
 
-// Initialize extension
+// Don't initialize immediately - let the extension manager handle this
+console.log('[ThemeManager] Extension loaded, creating instance...');
 const themeManager = new ThemeManager();
-themeManager.initialize();
 
 // Export for UnboundUI
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = ThemeManager;
 }
+
+console.log('[ThemeManager] Extension script completed');
