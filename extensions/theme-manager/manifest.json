@@ -1,32 +1,44 @@
 {
   "id": "theme-manager",
-  "name": "Theme Manager",
-  "description": "Customize the appearance of Open WebUI with themes and styles",
-  "version": "0.2.1",
-  "author": "Open WebUI Team",
+  "title": "Theme Manager Extension", 
+  "description": "Advanced theme management system for UnboundUI. Create, customize, and switch between themes with real-time preview. Includes a theme builder with color picker, typography controls, and component styling options.",
+  "version": "1.0.0",
+  "author": "UnboundUI Team",
+  "email": "extensions@unboundui.dev",
   "license": "MIT",
-  "type": "theme",
-  "tags": ["themes", "customization", "appearance"],
-  "category": "appearance",
+  "type": "tool",
+  "category": "ui",
+  "tags": ["themes", "customization", "ui", "colors", "styling", "design"],
   "compatibility": {
-    "openWebUIVersion": ">=0.1.0"
+    "unboundUIVersion": ">=1.0.0"
   },
-  "repository": "https://github.com/open-webui/theme-manager",
-  "bugs": {
-    "url": "https://github.com/open-webui/theme-manager/issues"
+  "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+  "mainFile": "src/theme-manager.js",
+  "previewImageUrl": "preview.png",
+  "icon": "icon.png", 
+  "keywords": ["unboundui", "themes", "ui", "customization"],
+  "permissions": {
+    "filesystem": { 
+      "read": ["themes", "workspace/themes"],
+      "write": ["themes", "workspace/themes"] 
+    },
+    "ui": {
+      "themes": true,
+      "colorPicker": true,
+      "styleEditor": true
+    },
+    "network": false
   },
-  "homepage": "https://github.com/open-webui/theme-manager",
-  "entryPoint": "__init__.py",
+  "dependencies": {
+    "unboundui": ">=1.0.0"
+  },
   "config": {
-    "sidebarIcon": "paint-brush",
-    "sidebarLabel": "Theme Manager",
-    "defaultTheme": "default",
-    "allowUserThemes": true
+    "defaultThemes": ["light", "dark", "auto"],
+    "customThemeSupport": true,
+    "realTimePreview": true,
+    "colorPickerEnabled": true
   },
-  "dependencies": [],
-  "permissions": [
-    "storage:read",
-    "storage:write",
-    "ui:theme"
-  ]
+  "downloads": 3200,
+  "averageRating": 4.7,
+  "ratingCount": 234
 }

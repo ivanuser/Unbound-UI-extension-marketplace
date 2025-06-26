@@ -1,0 +1,293 @@
+/* Ocean Breeze Theme for UnboundUI */
+/* A calming blue and teal theme inspired by ocean waves */
+
+:root {
+  /* === Core Ocean Colors === */
+  --ocean-deep: 207 87% 15%;      /* Deep ocean blue */
+  --ocean-medium: 199 84% 32%;    /* Medium ocean blue */
+  --ocean-light: 194 70% 56%;     /* Light ocean blue */
+  --sea-foam: 174 62% 77%;        /* Sea foam green */
+  --wave-crest: 186 33% 94%;      /* Wave crest white */
+  --sand: 43 13% 90%;             /* Sandy beige */
+  --coral: 14 83% 73%;            /* Coral accent */
+  
+  /* === ShadCN Variable Mapping === */
+  
+  /* Background and surfaces */
+  --background: 207 87% 15%;        /* Deep ocean blue */
+  --foreground: 186 33% 94%;        /* Wave crest white */
+  
+  /* Cards and containers */
+  --card: 207 70% 18%;
+  --card-foreground: 186 33% 94%;   /* Wave crest white */
+  
+  /* Popovers and tooltips */
+  --popover: 207 70% 18%;
+  --popover-foreground: 186 33% 94%; /* Wave crest white */
+  
+  /* Primary ocean blue */
+  --primary: 199 84% 32%;           /* Medium ocean blue */
+  --primary-foreground: 186 33% 94%; /* Wave crest white */
+  
+  /* Secondary sea foam */
+  --secondary: 207 50% 25%;
+  --secondary-foreground: 186 33% 94%; /* Wave crest white */
+  
+  /* Muted ocean tones */
+  --muted: 207 40% 22%;
+  --muted-foreground: 199 30% 70%;
+  
+  /* Accent sea foam */
+  --accent: 174 62% 77%;            /* Sea foam green */
+  --accent-foreground: 207 87% 15%; /* Deep ocean blue */
+  
+  /* Destructive coral */
+  --destructive: 14 83% 73%;        /* Coral */
+  --destructive-foreground: 186 33% 94%; /* Wave crest white */
+  
+  /* Borders and inputs */
+  --border: 207 30% 30%;
+  --input: 207 30% 30%;
+  --ring: 194 70% 56%;              /* Light ocean blue */
+  
+  /* Chart colors inspired by ocean life */
+  --chart-1: 194 70% 56%;           /* Ocean blue */
+  --chart-2: 174 62% 77%;           /* Sea foam */
+  --chart-3: 14 83% 73%;            /* Coral */
+  --chart-4: 290 65% 60%;           /* Sea anemone purple */
+  --chart-5: 45 93% 70%;            /* Tropical fish yellow */
+  
+  /* Custom ocean properties */
+  --wave-shadow: 0 4px 20px rgba(30, 64, 175, 0.15);
+  --foam-glow: 0 0 20px rgba(125, 211, 252, 0.3);
+  --depth-gradient: linear-gradient(135deg, 
+    hsl(var(--ocean-deep)) 0%, 
+    hsl(var(--ocean-medium)) 100%);
+}
+
+/* === Light mode ocean variant === */
+[data-theme="light"] {
+  --background: 186 33% 94%;        /* Wave crest white */
+  --foreground: 207 87% 15%;        /* Deep ocean blue */
+  
+  --card: 186 33% 97%;
+  --card-foreground: 207 87% 15%;   /* Deep ocean blue */
+  
+  --popover: 186 33% 97%;
+  --popover-foreground: 207 87% 15%; /* Deep ocean blue */
+  
+  --primary: 199 84% 32%;           /* Medium ocean blue */
+  --primary-foreground: 186 33% 94%; /* Wave crest white */
+  
+  --secondary: 194 20% 92%;
+  --secondary-foreground: 207 87% 15%; /* Deep ocean blue */
+  
+  --muted: 194 20% 92%;
+  --muted-foreground: 199 50% 40%;
+  
+  --accent: 194 20% 92%;
+  --accent-foreground: 207 87% 15%; /* Deep ocean blue */
+  
+  --border: 194 20% 85%;
+  --input: 194 20% 85%;
+}
+
+/* === Custom Ocean Styling === */
+
+/* Buttons with ocean wave styling */
+.btn-primary {
+  background: hsl(var(--primary));
+  border: 1px solid hsl(var(--ocean-light));
+  box-shadow: var(--wave-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    hsl(var(--wave-crest) / 0.2) 50%, 
+    transparent 100%);
+  transition: left 0.6s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+/* Input fields with ocean depth */
+.input-field {
+  background: hsl(var(--input));
+  border: 1px solid hsl(var(--border));
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: hsl(var(--ocean-light));
+  box-shadow: 0 0 0 2px hsl(var(--ocean-light) / 0.2);
+}
+
+/* Chat messages with wave-like borders */
+.chat-message {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 16px 16px 4px 16px;
+  box-shadow: var(--wave-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.chat-message::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    hsl(var(--ocean-light)) 0%, 
+    hsl(var(--sea-foam)) 50%, 
+    hsl(var(--ocean-light)) 100%);
+}
+
+/* Sidebar with depth gradient */
+.sidebar {
+  background: var(--depth-gradient);
+  border-right: 1px solid hsl(var(--border));
+}
+
+/* Navigation with wave effects */
+.nav-item:hover {
+  background: hsl(var(--accent) / 0.1);
+  box-shadow: var(--foam-glow);
+  transition: all 0.3s ease;
+}
+
+/* Code blocks with underwater theme */
+.code-block {
+  background: hsl(var(--muted));
+  border: 1px solid hsl(var(--border));
+  border-radius: 8px;
+  position: relative;
+}
+
+.code-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    hsl(var(--ocean-light)) 0%, 
+    hsl(var(--sea-foam)) 100%);
+}
+
+/* Scrollbars with ocean styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--ocean-light));
+  border-radius: 4px;
+  border: 1px solid hsl(var(--border));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--ocean-medium));
+}
+
+/* === Wave Animations (configurable) === */
+@keyframes gentle-wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes foam-bubble {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
+/* Apply animations when enabled */
+[data-ocean-animations="true"] .chat-message {
+  animation: gentle-wave 4s ease-in-out infinite;
+}
+
+[data-ocean-animations="true"] .btn-primary:hover {
+  animation: foam-bubble 0.6s ease-in-out;
+}
+
+/* === Responsive Ocean Depths === */
+[data-ocean-depth="shallow"] {
+  --ocean-deep: 199 65% 25%;
+  --ocean-medium: 194 60% 45%;
+  --muted: 194 30% 35%;
+}
+
+[data-ocean-depth="deep"] {
+  --ocean-deep: 220 85% 8%;
+  --ocean-medium: 215 80% 20%;
+  --muted: 215 60% 15%;
+}
+
+/* === High Contrast Mode === */
+@media (prefers-contrast: high) {
+  :root {
+    --border: 199 50% 50%;
+    --ring: 194 100% 70%;
+  }
+}
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  .chat-message,
+  .btn-primary:hover {
+    animation: none;
+  }
+  
+  .btn-primary::before,
+  .input-field,
+  .nav-item:hover {
+    transition: none;
+  }
+}
+
+/* === Print Styles === */
+@media print {
+  .chat-message {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .sidebar {
+    background: white;
+  }
+}
