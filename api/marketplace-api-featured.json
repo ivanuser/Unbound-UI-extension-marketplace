@@ -1,0 +1,48 @@
+{
+  "featured": [
+    {
+      "id": "theme-ocean-breeze",
+      "name": "Ocean Breeze Theme",
+      "author": "UnboundUI Team",
+      "description": "A refreshing ocean-inspired theme with calming blues and teals",
+      "version": "1.0.0",
+      "category": "ui",
+      "icon": "🌊",
+      "featured": true,
+      "downloads": 1250,
+      "rating": 4.8,
+      "tags": ["theme", "ocean", "blue", "modern"],
+      "lastUpdated": "2025-05-28T15:30:00Z"
+    },
+    {
+      "id": "productivity-dashboard",
+      "name": "Productivity Dashboard",
+      "author": "DevTools Inc",
+      "description": "Comprehensive dashboard for tracking tasks and productivity metrics",
+      "version": "2.1.0",
+      "category": "productivity",
+      "icon": "📊",
+      "featured": true,
+      "downloads": 890,
+      "rating": 4.6,
+      "tags": ["dashboard", "productivity", "analytics"],
+      "lastUpdated": "2025-05-27T14:20:00Z"
+    },
+    {
+      "id": "dev-toolkit",
+      "name": "Developer Toolkit",
+      "author": "CodeCraft Studios",
+      "description": "Essential tools and utilities for UnboundUI extension development",
+      "version": "1.5.2",
+      "category": "development",
+      "icon": "🔧",
+      "featured": true,
+      "downloads": 567,
+      "rating": 4.9,
+      "tags": ["development", "tools", "utilities"],
+      "lastUpdated": "2025-05-26T10:15:00Z"
+    }
+  ],
+  "totalFeatured": 3,
+  "lastUpdated": "2025-05-28T16:00:00Z"
+}

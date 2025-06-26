@@ -1,56 +1,40 @@
 {
   "id": "prompt-library",
-  "name": "Prompt Library",
-  "description": "Save, organize, and reuse effective prompts with categories and templates",
-  "version": "0.1.0",
-  "author": "Open WebUI Team",
+  "title": "Prompt Template Library",
+  "description": "A comprehensive collection of curated prompt templates for various use cases including creative writing, code generation, analysis, and professional communications. Boost your productivity with proven prompts.",
+  "version": "1.0.0",
+  "author": "UnboundUI Team",
+  "email": "extensions@unboundui.dev",
   "license": "MIT",
-  "type": "ui",
-  "tags": ["prompts", "templates", "productivity"],
+  "type": "prompt-templates",
   "category": "productivity",
+  "tags": ["prompts", "templates", "productivity", "ai", "writing", "creativity"],
   "compatibility": {
-    "openWebUIVersion": ">=0.1.0"
+    "unboundUIVersion": ">=1.0.0"
   },
-  "repository": "https://github.com/ivanuser/open-webui-extension-marketplace/tree/main/extensions/prompt-library",
-  "bugs": {
-    "url": "https://github.com/ivanuser/open-webui-extension-marketplace/issues"
-  },
-  "homepage": "https://github.com/ivanuser/open-webui-extension-marketplace/tree/main/extensions/prompt-library",
-  "entryPoint": "__init__.py",
-  "config": {
-    "sidebarIcon": "library",
-    "sidebarLabel": "Prompt Library",
-    "defaultCategory": "general",
-    "allowExport": true,
-    "allowImport": true,
-    "maxPrompts": 100,
-    "showInChatInterface": true
-  },
-  "dependencies": [],
-  "permissions": [
-    "storage:read",
-    "storage:write"
-  ],
-  "changelog": [
-    {
-      "version": "0.1.0",
-      "date": "2025-03-10",
-      "changes": [
-        "Initial release",
-        "Basic prompt management functionality",
-        "Pre-built prompt templates",
-        "Categorization and tagging"
-      ]
-    }
-  ],
-  "screenshots": [
-    {
-      "path": "screenshots/main.png",
-      "caption": "Main Prompt Library interface"
+  "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+  "mainFile": "src/library.js",
+  "previewImageUrl": "preview.png",
+  "icon": "icon.png",
+  "keywords": ["unboundui", "prompt-templates", "productivity", "ai"],
+  "permissions": {
+    "filesystem": { 
+      "read": ["workspace/prompts"] 
     },
-    {
-      "path": "screenshots/template.png",
-      "caption": "Prompt template editor"
-    }
-  ]
+    "network": false
+  },
+  "dependencies": {
+    "unboundui": ">=1.0.0"
+  },
+  "config": {
+    "categories": [
+      "creative-writing",
+      "code-generation", 
+      "analysis",
+      "communication",
+      "learning",
+      "brainstorming"    ],
+    "customTemplates": true,
+    "templateCount": 150
+  }
 }

@@ -1,0 +1,150 @@
+/* Ocean Breeze Theme for UnboundUI */
+
+:root {
+  /* Primary Ocean Colors */
+  --color-primary: #0ea5e9;
+  --color-primary-light: #38bdf8;
+  --color-primary-dark: #0284c7;
+  
+  /* Secondary Teal Colors */
+  --color-secondary: #14b8a6;
+  --color-secondary-light: #2dd4bf;
+  --color-secondary-dark: #0f766e;
+  
+  /* Background Ocean Gradients */
+  --color-background: #f0fdff;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f0f9ff;
+  
+  /* Text Colors */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  
+  /* Accent Colors */
+  --color-accent: #06b6d4;
+  --color-accent-light: #67e8f9;
+  --color-accent-dark: #0891b2;
+  
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  
+  /* Border Colors */
+  --color-border: #e2e8f0;
+  --color-border-light: #f1f5f9;
+  --color-border-dark: #cbd5e1;
+  
+  /* Shadow Colors */
+  --shadow-color: rgba(14, 165, 233, 0.1);
+  --shadow-light: 0 1px 3px var(--shadow-color);
+  --shadow-medium: 0 4px 6px var(--shadow-color);
+  --shadow-large: 0 10px 15px var(--shadow-color);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0c1421;
+    --color-surface: #1e293b;
+    --color-surface-hover: #334155;
+    
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    
+    --color-border: #334155;
+    --color-border-light: #475569;
+    --color-border-dark: #1e293b;
+    
+    --shadow-color: rgba(14, 165, 233, 0.2);
+  }
+}
+
+/* Apply theme to UnboundUI components */
+.unboundui-app {
+  background: linear-gradient(135deg, var(--color-background) 0%, #e0f7fa 100%);
+  color: var(--color-text-primary);
+}
+
+.unboundui-header {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+}
+
+.unboundui-sidebar {
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+}
+
+.unboundui-button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.unboundui-button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+.unboundui-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+}
+
+.unboundui-input {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text-primary);
+  transition: border-color 0.2s ease;
+}
+
+.unboundui-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+/* Ocean wave animations */
+@keyframes wave {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+.ocean-wave {
+  animation: wave 6s ease-in-out infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .unboundui-app {
+    background: var(--color-background);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border: #000000;
+    --color-text-primary: #000000;
+    --color-background: #ffffff;
+  }
+}

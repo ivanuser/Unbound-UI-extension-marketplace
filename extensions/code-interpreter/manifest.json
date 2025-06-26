@@ -1,38 +1,38 @@
 {
   "id": "code-interpreter",
-  "name": "Code Interpreter",
-  "description": "Execute and visualize code within conversations",
-  "version": "0.3.0",
-  "author": "Open WebUI Team",
+  "title": "Code Interpreter Extension",
+  "description": "A powerful code execution environment that supports multiple programming languages including Python, JavaScript, and more. Execute code snippets safely in isolated environments with real-time output.",
+  "version": "1.0.0",
+  "author": "UnboundUI Team",
+  "email": "extensions@unboundui.dev",
   "license": "MIT",
-  "type": "tool",
-  "tags": ["code", "programming", "visualizations", "data-analysis"],
-  "category": "developer-tools",
+  "type": "code-interpreter",
+  "category": "development",
+  "tags": ["code", "execution", "python", "javascript", "development", "interpreter"],
   "compatibility": {
-    "openWebUIVersion": ">=0.1.5"
+    "unboundUIVersion": ">=1.0.0"
   },
-  "repository": "https://github.com/open-webui/code-interpreter",
-  "bugs": {
-    "url": "https://github.com/open-webui/code-interpreter/issues"
+  "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+  "mainFile": "src/interpreter.js",
+  "previewImageUrl": "preview.png",
+  "icon": "icon.png",
+  "keywords": ["unboundui", "code-interpreter", "development", "execution"],
+  "permissions": {
+    "system": { 
+      "process": true,
+      "sandbox": true 
+    },
+    "network": false,
+    "filesystem": { 
+      "read": ["workspace/temp"],
+      "write": ["workspace/temp"] 
+    }
   },
-  "homepage": "https://github.com/open-webui/code-interpreter",
-  "entryPoint": "__init__.py",
-  "config": {
-    "enabledLanguages": ["python", "javascript", "r"],
-    "maxExecutionTime": 30,
-    "sandboxed": true,
-    "allowFileSystem": false,
-    "allowNetworkAccess": false,
-    "memoryLimit": "512M"
-  },
-  "dependencies": [
-    "numpy",
-    "pandas",
-    "matplotlib",
-    "scikit-learn"
-  ],
-  "permissions": [
-    "execution:code",
-    "ui:render"
-  ]
+  "dependencies": {
+    "unboundui": ">=1.0.0"
+  },  "config": {
+    "supportedLanguages": ["python", "javascript", "typescript", "bash"],
+    "timeout": 30000,
+    "memoryLimit": "128MB"
+  }
 }

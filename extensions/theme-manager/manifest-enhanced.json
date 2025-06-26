@@ -1,0 +1,60 @@
+{
+  "id": "theme-manager",
+  "title": "Enhanced Theme Manager",
+  "description": "Advanced theme management system for UnboundUI with proper save functionality, real-time preview, and context-aware toolbar. Create, customize, and switch between themes with ease.",
+  "version": "2.0.0",
+  "author": "UnboundUI Team",
+  "email": "extensions@unboundui.dev",
+  "license": "MIT",
+  "type": "tool",
+  "category": "ui",
+  "tags": ["themes", "customization", "ui", "colors", "styling", "design", "enhanced"],
+  "compatibility": {
+    "unboundUIVersion": ">=1.0.0"
+  },
+  "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+  "mainFile": "src/theme-manager-enhanced.js",
+  "previewImageUrl": "preview.png",
+  "icon": "icon.png",
+  "keywords": ["unboundui", "themes", "ui", "customization", "enhanced", "save"],
+  "permissions": {
+    "filesystem": {
+      "read": ["themes", "workspace/themes"],
+      "write": ["themes", "workspace/themes"]
+    },
+    "ui": {
+      "themes": true,
+      "colorPicker": true,
+      "styleEditor": true,
+      "contextAware": true
+    },
+    "storage": {
+      "localStorage": true
+    },
+    "network": false
+  },
+  "dependencies": {
+    "unboundui": ">=1.0.0"
+  },
+  "config": {
+    "defaultThemes": ["light", "dark", "auto"],
+    "customThemeSupport": true,
+    "realTimePreview": true,
+    "colorPickerEnabled": true,
+    "saveToLocalStorage": true,
+    "contextAwareToolbar": true,
+    "unsavedChangesTracking": true
+  },
+  "features": [
+    "Real-time color preview",
+    "Individual property save buttons",
+    "Unsaved changes tracking",
+    "Context-aware toolbar",
+    "Theme persistence",
+    "Custom theme creation",
+    "Theme import/export"
+  ],
+  "downloads": 3200,
+  "averageRating": 4.7,
+  "ratingCount": 234
+}

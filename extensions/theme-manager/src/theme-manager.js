@@ -77,14 +77,16 @@ class ThemeManager {
   /**
    * Called when the extension is deactivated
    */
-  async deactivate() {
+  async  deactivate() {
     console.log('[ThemeManager] Deactivate called');
     
     // Cleanup UI elements
     if (this.context) {
-      this.context.removeToolbarButton('theme-manager');
       this.context.removeSidebarPanel('theme-manager-panel');
     }
+    
+    // Remove dynamic toolbar button
+    this.removeDynamicToolbar();
     
     console.log('[ThemeManager] Extension deactivated');
   }
@@ -203,21 +205,14 @@ class ThemeManager {
 
   /**
    * Setup theme manager UI
-   */
-  setupUI() {
+   */  setupUI() {
     console.log('[ThemeManager] Setting up UI...');
     
     try {
-      // Add toolbar button for quick access
-      console.log('[ThemeManager] Adding toolbar button...');
-      this.context.addToolbarButton({
-        id: 'theme-manager',
-        label: 'Theme Manager',
-        icon: 'palette',
-        tooltip: 'Open Advanced Theme Manager',
-        onClick: this.openThemeManager.bind(this)
-      });
-      console.log('[ThemeManager] Toolbar button added');
+      // Create dynamic toolbar directly in the DOM instead of using addToolbarButton
+      console.log('[ThemeManager] Creating dynamic toolbar...');
+      this.createDynamicToolbar();
+      console.log('[ThemeManager] Dynamic toolbar created');
 
       // Add sidebar panel for theme management
       console.log('[ThemeManager] Adding sidebar panel...');
@@ -249,10 +244,92 @@ class ThemeManager {
       // Initialize UI components
       this.setupColorPicker();
       this.setupStyleEditor();
-      
-      console.log('[ThemeManager] UI setup completed successfully');
+          console.log('[ThemeManager] UI setup completed successfully');
     } catch (error) {
       console.error('[ThemeManager] Error setting up UI:', error);
+    }
+  }
+
+  /**
+   * Create dynamic toolbar that injects directly into the DOM
+   */
+  createDynamicToolbar() {
+    console.log('[ThemeManager] Creating dynamic toolbar...');
+    
+    // Wait for DOM to be ready
+    const createButton = () => {
+      const container = document.getElementById('extension-toolbar-container');
+      if (!container) {
+        console.log('[ThemeManager] Toolbar container not found, retrying...');
+        setTimeout(createButton, 100);
+        return;
+      }
+
+      // Remove any existing theme manager buttons
+      const existingButton = container.querySelector('[data-extension-id="theme-manager"]');
+      if (existingButton) {
+        existingButton.remove();
+      }
+
+      // Create the toolbar button
+      const button = document.createElement('button');
+      button.setAttribute('data-extension-id', 'theme-manager');
+      button.className = 'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 w-8';
+      button.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+          <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+          <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+          <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+          <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+          <circle cx="12.5" cy="16.5" r=".5" fill="currentColor"/>
+          <circle cx="13.5" cy="20.5" r=".5" fill="currentColor"/>
+          <circle cx="9.5" cy="19.5" r=".5" fill="currentColor"/>
+          <circle cx="5.5" cy="17.5" r=".5" fill="currentColor"/>
+          <circle cx="3.5" cy="13.5" r=".5" fill="currentColor"/>
+          <circle cx="3.5" cy="8.5" r=".5" fill="currentColor"/>
+          <circle cx="7.5" cy="4.5" r=".5" fill="currentColor"/>
+          <circle cx="11.5" cy="3.5" r=".5" fill="currentColor"/>
+          <circle cx="16.5" cy="4.5" r=".5" fill="currentColor"/>
+          <circle cx="20.5" cy="7.5" r=".5" fill="currentColor"/>
+          <circle cx="21.5" cy="12.5" r=".5" fill="currentColor"/>
+          <circle cx="19.5" cy="17.5" r=".5" fill="currentColor"/>
+          <circle cx="15.5" cy="20.5" r=".5" fill="currentColor"/>
+        </svg>
+        <span class="sr-only">Theme Manager</span>
+      `;
+      
+      // Add click handler
+      button.addEventListener('click', () => {
+        console.log('[ThemeManager] Toolbar button clicked');
+        this.openThemeManager();
+      });
+
+      // Add tooltip functionality
+      button.title = 'Open Advanced Theme Manager';
+
+      // Insert the button into the container
+      container.appendChild(button);
+      console.log('[ThemeManager] Dynamic toolbar button created and inserted');
+    };    // Start creating the button
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', createButton);
+    } else {
+      createButton();
+    }
+  }
+
+  /**
+   * Remove dynamic toolbar button
+   */
+  removeDynamicToolbar() {
+    console.log('[ThemeManager] Removing dynamic toolbar...');
+    const container = document.getElementById('extension-toolbar-container');
+    if (container) {
+      const button = container.querySelector('[data-extension-id="theme-manager"]');
+      if (button) {
+        button.remove();
+        console.log('[ThemeManager] Dynamic toolbar button removed');
+      }
     }
   }
 

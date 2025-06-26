@@ -1,0 +1,219 @@
+[
+  {
+    "id": "theme-sunset-glow",
+    "title": "Sunset Glow Theme",
+    "description": "A warm sunset-inspired theme with orange and pink gradients",
+    "version": "1.0.0",
+    "author": "ThemeArtist",
+    "email": "artist@themes.dev",
+    "license": "MIT",
+    "type": "theme",
+    "category": "ui",
+    "tags": ["orange", "pink", "sunset", "warm", "gradient"],
+    "compatibility": {
+      "unboundUIVersion": ">=1.0.0"
+    },
+    "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+    "mainFile": "src/theme.css",
+    "previewImageUrl": "preview.png",
+    "icon": "icon.png",
+    "keywords": ["unboundui", "theme", "sunset", "warm"],
+    "permissions": {
+      "ui": {
+        "themes": true,
+        "colorScheme": true
+      }    },
+    "dependencies": {
+      "unboundui": ">=1.0.0"
+    }
+  },
+  {
+    "id": "code-interpreter",
+    "title": "Code Interpreter Extension",
+    "description": "A powerful code execution environment that supports multiple programming languages including Python, JavaScript, and more. Execute code snippets safely in isolated environments with real-time output.",
+    "version": "1.0.0",
+    "author": "UnboundUI Team",
+    "email": "extensions@unboundui.dev",
+    "license": "MIT",
+    "type": "code-interpreter",
+    "category": "development",
+    "tags": ["code", "execution", "python", "javascript", "development", "interpreter"],
+    "compatibility": {
+      "unboundUIVersion": ">=1.0.0"
+    },
+    "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+    "mainFile": "src/interpreter.js",
+    "previewImageUrl": "preview.png",
+    "icon": "icon.png",
+    "keywords": ["unboundui", "code-interpreter", "development", "execution"],
+    "permissions": {
+      "system": { 
+        "process": true,
+        "sandbox": true 
+      },
+      "network": false,      "filesystem": { 
+        "read": ["workspace/temp"],
+        "write": ["workspace/temp"] 
+      }
+    },
+    "dependencies": {
+      "unboundui": ">=1.0.0"
+    }
+  },
+  {
+    "id": "prompt-library",
+    "title": "Prompt Template Library",
+    "description": "A comprehensive collection of curated prompt templates for various use cases including creative writing, code generation, analysis, and professional communications. Boost your productivity with proven prompts.",
+    "version": "1.0.0",
+    "author": "UnboundUI Team",
+    "email": "extensions@unboundui.dev",
+    "license": "MIT",
+    "type": "prompt-templates",
+    "category": "productivity",
+    "tags": ["prompts", "templates", "productivity", "ai", "writing", "creativity"],
+    "compatibility": {
+      "unboundUIVersion": ">=1.0.0"
+    },
+    "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+    "mainFile": "src/library.js",
+    "previewImageUrl": "preview.png",
+    "icon": "icon.png",
+    "keywords": ["unboundui", "prompt-templates", "productivity", "ai"],    "permissions": {
+      "filesystem": { 
+        "read": ["workspace/prompts"] 
+      },
+      "network": false
+    },
+    "dependencies": {
+      "unboundui": ">=1.0.0"
+    }
+  },
+  {
+    "id": "theme-manager",
+    "title": "Theme Manager Extension", 
+    "description": "Advanced theme management system for UnboundUI. Create, customize, and switch between themes with real-time preview. Includes a theme builder with color picker, typography controls, and component styling options.",
+    "version": "1.0.0",
+    "author": "UnboundUI Team",
+    "email": "extensions@unboundui.dev",
+    "license": "MIT",
+    "type": "tool",
+    "category": "ui",
+    "tags": ["themes", "customization", "ui", "colors", "styling", "design"],
+    "compatibility": {
+      "unboundUIVersion": ">=1.0.0"
+    },
+    "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+    "mainFile": "src/theme-manager.js",
+    "previewImageUrl": "preview.png",
+    "icon": "icon.png", 
+    "keywords": ["unboundui", "themes", "ui", "customization"],
+    "permissions": {
+      "filesystem": { 
+        "read": ["themes", "workspace/themes"],
+        "write": ["themes", "workspace/themes"] 
+      },      "ui": {
+        "themes": true,
+        "colorPicker": true,
+        "styleEditor": true
+      },
+      "network": false
+    },
+    "dependencies": {
+      "unboundui": ">=1.0.0"
+    },
+    "downloads": 3200,
+    "averageRating": 4.7,
+    "ratingCount": 234
+  },
+  {
+    "id": "theme-ocean-breeze",
+    "title": "Ocean Breeze Theme",
+    "description": "A calming blue and teal theme inspired by ocean waves and sea breeze. Perfect for long coding sessions with its easy-on-the-eyes color palette and professional appearance.",
+    "version": "1.0.0",
+    "author": "UnboundUI Team",
+    "email": "extensions@unboundui.dev",
+    "license": "MIT",
+    "type": "theme",
+    "category": "ui",
+    "tags": ["blue", "teal", "ocean", "calming", "professional", "accessibility"],
+    "compatibility": {
+      "unboundUIVersion": ">=1.0.0"
+    },
+    "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+    "mainFile": "src/theme.css",
+    "previewImageUrl": "preview.png",
+    "icon": "icon.png",    "keywords": ["unboundui", "theme", "ocean", "blue", "calming"],
+    "permissions": {
+      "ui": {
+        "themes": true,
+        "colorScheme": true
+      }
+    },
+    "dependencies": {
+      "unboundui": ">=1.0.0"
+    }
+  },
+  {
+    "id": "library-ui-components",
+    "title": "UnboundUI Component Library",
+    "description": "A comprehensive collection of reusable UI components, utilities, and React hooks for UnboundUI extensions. Includes buttons, modals, forms, charts, and advanced utilities for rapid extension development.",
+    "version": "1.0.0",
+    "author": "UnboundUI Team",
+    "email": "extensions@unboundui.dev",
+    "license": "MIT",
+    "type": "library",
+    "category": "development",
+    "tags": ["ui", "components", "library", "utilities", "react", "hooks", "development"],
+    "compatibility": {
+      "unboundUIVersion": ">=1.0.0",
+      "nodeVersion": ">=18.0.0"
+    },
+    "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+    "mainFile": "src/index.js",
+    "previewImageUrl": "preview.png",
+    "icon": "icon.png",
+    "keywords": ["unboundui", "library", "components", "react", "utilities"],
+    "permissions": {
+      "ui": {
+        "components": true,
+        "styling": true
+      }    },
+    "dependencies": {
+      "unboundui": ">=1.0.0",
+      "react": ">=18.0.0",
+      "react-dom": ">=18.0.0"
+    }
+  },
+  {
+    "id": "tool-text-transformer",
+    "title": "Text Transformer Tool",
+    "description": "Advanced text transformation utilities for formatting, case conversion, markdown processing, and text manipulation. Includes 20+ transformation functions with batch processing and clipboard integration.",
+    "version": "1.0.0",
+    "author": "UnboundUI Team",
+    "email": "extensions@unboundui.dev",
+    "license": "MIT",
+    "type": "tool",
+    "category": "productivity",
+    "tags": ["text", "formatting", "transformation", "productivity", "utility", "clipboard"],
+    "compatibility": {
+      "unboundUIVersion": ">=1.0.0",
+      "nodeVersion": ">=18.0.0"
+    },
+    "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+    "mainFile": "src/index.js",
+    "previewImageUrl": "preview.png",
+    "icon": "icon.png",
+    "keywords": ["unboundui", "text", "transformer", "productivity", "utility"],
+    "permissions": {
+      "system": {
+        "clipboard": true
+      },      "ui": {
+        "toolbar": true,
+        "sidebar": true
+      }
+    },
+    "dependencies": {
+      "unboundui": ">=1.0.0"
+    }
+  }
+]

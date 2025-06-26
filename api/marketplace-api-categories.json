@@ -1,0 +1,27 @@
+{
+  "categories": [
+    {
+      "id": "ui",
+      "name": "User Interface",
+      "description": "Themes and UI enhancements for UnboundUI",
+      "icon": "🎨",
+      "count": 3
+    },
+    {
+      "id": "productivity",
+      "name": "Productivity",
+      "description": "Tools and templates to boost your productivity",
+      "icon": "⚡",
+      "count": 2
+    },
+    {
+      "id": "development",
+      "name": "Development",
+      "description": "Tools and libraries for developers and extension creators",
+      "icon": "💻",
+      "count": 2
+    }
+  ],
+  "totalExtensions": 7,
+  "lastUpdated": "2025-05-28T16:00:00Z"
+}
