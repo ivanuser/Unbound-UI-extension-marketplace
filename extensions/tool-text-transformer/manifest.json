@@ -8,7 +8,21 @@
   "license": "MIT",
   "type": "tool",
   "category": "productivity",
-  "tags": ["text", "formatting", "transformation", "productivity", "utility", "clipboard"],
+  "tags": [
+    "text",
+    "formatting",
+    "transformation",
+    "productivity",
+    "utility",
+    "clipboard"
+  ],
+  "keywords": [
+    "unboundui",
+    "text",
+    "transformer",
+    "productivity",
+    "utility"
+  ],
   "compatibility": {
     "unboundUIVersion": ">=1.0.0",
     "nodeVersion": ">=18.0.0"
@@ -17,7 +31,6 @@
   "mainFile": "src/index.js",
   "previewImageUrl": "preview.png",
   "icon": "icon.png",
-  "keywords": ["unboundui", "text", "transformer", "productivity", "utility"],
   "permissions": {
     "system": {
       "clipboard": true
@@ -29,7 +42,8 @@
   },
   "dependencies": {
     "unboundui": ">=1.0.0"
-  },  "config": {
+  },
+  "config": {
     "transformationCount": 25,
     "batchProcessing": true,
     "clipboardIntegration": true,

@@ -8,7 +8,20 @@
   "license": "MIT",
   "type": "code-interpreter",
   "category": "development",
-  "tags": ["code", "execution", "python", "javascript", "development", "interpreter"],
+  "tags": [
+    "code",
+    "execution",
+    "python",
+    "javascript",
+    "development",
+    "interpreter"
+  ],
+  "keywords": [
+    "unboundui",
+    "code-interpreter",
+    "development",
+    "execution"
+  ],
   "compatibility": {
     "unboundUIVersion": ">=1.0.0"
   },
@@ -16,22 +29,31 @@
   "mainFile": "src/interpreter.js",
   "previewImageUrl": "preview.png",
   "icon": "icon.png",
-  "keywords": ["unboundui", "code-interpreter", "development", "execution"],
   "permissions": {
-    "system": { 
+    "system": {
       "process": true,
-      "sandbox": true 
+      "sandbox": true
     },
     "network": false,
-    "filesystem": { 
-      "read": ["workspace/temp"],
-      "write": ["workspace/temp"] 
+    "filesystem": {
+      "read": [
+        "workspace/temp"
+      ],
+      "write": [
+        "workspace/temp"
+      ]
     }
   },
   "dependencies": {
     "unboundui": ">=1.0.0"
-  },  "config": {
-    "supportedLanguages": ["python", "javascript", "typescript", "bash"],
+  },
+  "config": {
+    "supportedLanguages": [
+      "python",
+      "javascript",
+      "typescript",
+      "bash"
+    ],
     "timeout": 30000,
     "memoryLimit": "128MB"
   }

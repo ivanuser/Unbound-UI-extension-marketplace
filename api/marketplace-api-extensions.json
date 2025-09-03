@@ -68,7 +68,7 @@
     "author": "UnboundUI Team",
     "email": "extensions@unboundui.dev",
     "license": "MIT",
-    "type": "prompt-templates",
+    "type": "prompt-template",
     "category": "productivity",
     "tags": ["prompts", "templates", "productivity", "ai", "writing", "creativity"],
     "compatibility": {
@@ -78,7 +78,7 @@
     "mainFile": "src/library.js",
     "previewImageUrl": "preview.png",
     "icon": "icon.png",
-    "keywords": ["unboundui", "prompt-templates", "productivity", "ai"],    "permissions": {
+    "keywords": ["unboundui", "prompt-template", "productivity", "ai"],    "permissions": {
       "filesystem": { 
         "read": ["workspace/prompts"] 
       },

@@ -1,6 +1,6 @@
 {
   "id": "theme-manager",
-  "title": "Theme Manager Extension", 
+  "title": "Theme Manager Extension",
   "description": "Advanced theme management system for UnboundUI. Create, customize, and switch between themes with real-time preview. Includes a theme builder with color picker, typography controls, and component styling options.",
   "version": "1.0.0",
   "author": "UnboundUI Team",
@@ -8,19 +8,37 @@
   "license": "MIT",
   "type": "tool",
   "category": "ui",
-  "tags": ["themes", "customization", "ui", "colors", "styling", "design"],
+  "tags": [
+    "themes",
+    "customization",
+    "ui",
+    "colors",
+    "styling",
+    "design"
+  ],
+  "keywords": [
+    "unboundui",
+    "themes",
+    "ui",
+    "customization"
+  ],
   "compatibility": {
     "unboundUIVersion": ">=1.0.0"
   },
   "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
   "mainFile": "src/theme-manager.js",
   "previewImageUrl": "preview.png",
-  "icon": "icon.png", 
-  "keywords": ["unboundui", "themes", "ui", "customization"],
+  "icon": "icon.png",
   "permissions": {
-    "filesystem": { 
-      "read": ["themes", "workspace/themes"],
-      "write": ["themes", "workspace/themes"] 
+    "filesystem": {
+      "read": [
+        "themes",
+        "workspace/themes"
+      ],
+      "write": [
+        "themes",
+        "workspace/themes"
+      ]
     },
     "ui": {
       "themes": true,
@@ -33,12 +51,13 @@
     "unboundui": ">=1.0.0"
   },
   "config": {
-    "defaultThemes": ["light", "dark", "auto"],
+    "defaultThemes": [
+      "light",
+      "dark",
+      "auto"
+    ],
     "customThemeSupport": true,
     "realTimePreview": true,
     "colorPickerEnabled": true
-  },
-  "downloads": 3200,
-  "averageRating": 4.7,
-  "ratingCount": 234
+  }
 }

@@ -17,7 +17,7 @@
     "tool",
     "library",
     "code-interpreter",
-    "prompt-templates"
+    "prompt-template"
   ],
   "apis": {
     "extensions": "/api/marketplace-api-extensions.json",
@@ -46,7 +46,7 @@
     {
       "id": "prompt-library",
       "name": "Prompt Template Library",
-      "type": "prompt-templates",
+      "type": "prompt-template",
       "category": "productivity"
     },
     {

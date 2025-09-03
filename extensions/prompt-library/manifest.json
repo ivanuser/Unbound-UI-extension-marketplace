@@ -6,9 +6,22 @@
   "author": "UnboundUI Team",
   "email": "extensions@unboundui.dev",
   "license": "MIT",
-  "type": "prompt-templates",
+  "type": "prompt-template",
   "category": "productivity",
-  "tags": ["prompts", "templates", "productivity", "ai", "writing", "creativity"],
+  "tags": [
+    "prompts",
+    "templates",
+    "productivity",
+    "ai",
+    "writing",
+    "creativity"
+  ],
+  "keywords": [
+    "unboundui",
+    "prompt-template",
+    "productivity",
+    "ai"
+  ],
   "compatibility": {
     "unboundUIVersion": ">=1.0.0"
   },
@@ -16,10 +29,11 @@
   "mainFile": "src/library.js",
   "previewImageUrl": "preview.png",
   "icon": "icon.png",
-  "keywords": ["unboundui", "prompt-templates", "productivity", "ai"],
   "permissions": {
-    "filesystem": { 
-      "read": ["workspace/prompts"] 
+    "filesystem": {
+      "read": [
+        "workspace/prompts"
+      ]
     },
     "network": false
   },
@@ -29,11 +43,12 @@
   "config": {
     "categories": [
       "creative-writing",
-      "code-generation", 
+      "code-generation",
       "analysis",
       "communication",
       "learning",
-      "brainstorming"    ],
+      "brainstorming"
+    ],
     "customTemplates": true,
     "templateCount": 150
   }

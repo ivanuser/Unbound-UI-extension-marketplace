@@ -2,9 +2,23 @@
   "id": "theme-sunset-glow",
   "title": "Sunset Glow Theme",
   "description": "A warm and inviting theme inspired by the beautiful hues of a sunset. Perfect for a cozy Unbound UI experience.",
-  "author": "Honercloud",
   "version": "1.0.2",
+  "author": "Honercloud",
+  "email": "extensions@unboundui.dev",
+  "license": "MIT",
   "type": "theme",
+  "category": "ui",
+  "tags": ["orange", "pink", "sunset", "warm", "gradient"],
+  "keywords": ["unboundui", "theme", "sunset", "warm"],
+  "compatibility": {
+    "unboundUIVersion": ">=1.0.0"
+  },
+  "repository": "https://github.com/ivanuser/Unbound-UI-extension-marketplace",
+  "mainFile": "theme.css",
   "previewImageUrl": "preview.png",
-  "mainFile": "theme.css"
+  "icon": "icon.png",
+  "permissions": {},
+  "dependencies": {
+    "unboundui": ">=1.0.0"
+  }
 }

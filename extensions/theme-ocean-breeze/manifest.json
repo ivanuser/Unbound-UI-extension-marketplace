@@ -8,7 +8,21 @@
   "license": "MIT",
   "type": "theme",
   "category": "ui",
-  "tags": ["blue", "teal", "ocean", "calming", "professional", "accessibility"],
+  "tags": [
+    "blue",
+    "teal",
+    "ocean",
+    "calming",
+    "professional",
+    "accessibility"
+  ],
+  "keywords": [
+    "unboundui",
+    "theme",
+    "ocean",
+    "blue",
+    "calming"
+  ],
   "compatibility": {
     "unboundUIVersion": ">=1.0.0"
   },
@@ -16,7 +30,6 @@
   "mainFile": "src/theme.css",
   "previewImageUrl": "preview.png",
   "icon": "icon.png",
-  "keywords": ["unboundui", "theme", "ocean", "blue", "calming"],
   "permissions": {
     "ui": {
       "themes": true,
@@ -27,7 +40,8 @@
     "unboundui": ">=1.0.0"
   },
   "config": {
-    "configurable": true,    "darkModeSupport": true,
+    "configurable": true,
+    "darkModeSupport": true,
     "accessibilityOptimized": true
   }
 }
