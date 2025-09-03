@@ -149,6 +149,143 @@ npm run test-marketplace
 npm run test-extension extensions/your-extension-id
 ```
 
+## Automation & CI/CD (v2.0 Features)
+
+### GitHub Webhooks Integration
+
+The marketplace now supports automated extension deployment through GitHub webhooks:
+
+#### Setup for Extension Developers
+
+1. **Copy CI/CD Template**: Use the provided GitHub Actions workflow template
+   ```bash
+   # Copy from UnboundUI repository
+   cp templates/extension-ci-workflow.yml .github/workflows/ci.yml
+   ```
+
+2. **Configure Webhooks**: Set up webhooks in your extension repository
+   - **Payload URL**: `https://your-unboundui-instance.com/api/webhooks/github`
+   - **Content Type**: `application/json`  
+   - **Events**: Push, Release
+   - **Secret**: Contact your UnboundUI administrator for webhook secret
+
+3. **Automated Processing**: Extensions automatically update when you:
+   - Push changes to extensions/ directory
+   - Create new releases
+   - Update manifest.json files
+
+#### CI/CD Pipeline Features
+
+- **Extension Detection**: Automatically detects changed extensions in commits
+- **Schema Validation**: Validates manifest.json against UnboundUI schema
+- **Security Scanning**: Checks for vulnerabilities and malicious content
+- **Performance Testing**: Validates extension size and optimization
+- **Multi-Extension Support**: Processes multiple extensions in parallel
+- **Deployment**: Automatically deploys passing extensions
+
+### Extension Testing Framework
+
+Comprehensive validation system for extension quality:
+
+#### Test Categories
+
+- **Manifest Validation**: Schema compliance and required field verification
+- **File Structure**: Referenced file existence and accessibility checks  
+- **Security Analysis**: Permission verification and content scanning
+- **Compatibility Testing**: UnboundUI version compatibility validation
+- **Performance Metrics**: Size limits and optimization recommendations
+
+#### Quality Gates
+
+Extensions must pass all tests to be accepted:
+- ✅ **Manifest Schema**: Valid JSON structure with required fields
+- ✅ **File References**: All referenced files exist and are accessible  
+- ✅ **Security Check**: No dangerous permissions or suspicious content
+- ✅ **Size Limits**: Extension size under 50MB limit
+- ✅ **Version Format**: Semantic versioning compliance
+
+### Developer Portal Integration
+
+Enhanced developer experience with automated tools:
+
+#### GitHub OAuth Integration
+- **Secure Authentication**: Link your GitHub account to UnboundUI
+- **Repository Connection**: Automatically link extensions to GitHub repos
+- **Sync Management**: Control when extensions update from repository changes
+
+#### Analytics Dashboard
+- **Download Metrics**: Track extension popularity and usage
+- **Performance Data**: Monitor extension load times and errors  
+- **User Feedback**: Access ratings and reviews from users
+- **Update Statistics**: See deployment success rates and CI/CD metrics
+
+### Extension Schema v2.0
+
+Enhanced manifest format with automation support:
+
+```json
+{
+  "id": "your-extension",
+  "title": "Extension Title",
+  "description": "Extension description (min 10 chars)",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "type": "theme|tool|library|code-interpreter|prompt-template",
+  "license": "MIT",
+  "repository": "https://github.com/username/repo",
+  "compatibility": {
+    "unboundui": ">=2.0.0"
+  },
+  "permissions": ["ui.modify", "storage.read"],
+  "build": {
+    "scripts": {
+      "build": "npm run build"
+    },
+    "outputDir": "dist"
+  },
+  "testing": {
+    "testCommand": "npm test",
+    "coverage": true
+  }
+}
+```
+
+#### Schema Enhancements
+- **Repository Integration**: GitHub repository linking for automated updates
+- **Build Configuration**: Custom build scripts and output directories
+- **Permission System**: Granular permission declarations
+- **Testing Setup**: Automated test execution configuration
+- **Compatibility Matrix**: Detailed version compatibility specifications
+
+### Automated Quality Assurance
+
+Every extension submission undergoes automated validation:
+
+#### Pre-Submission Checks
+- **Syntax Validation**: JSON manifest parsing and structure verification
+- **File Integrity**: Verify all referenced files are present and valid
+- **Security Scanning**: Check for potentially dangerous code or permissions
+- **Performance Analysis**: Size optimization and loading time assessment
+
+#### Continuous Monitoring  
+- **Update Validation**: Re-test extensions when dependencies change
+- **Security Alerts**: Notify developers of newly discovered vulnerabilities
+- **Performance Tracking**: Monitor extension impact on UnboundUI performance
+- **Usage Analytics**: Track adoption rates and user satisfaction
+
+### Migration from v1.0
+
+#### For Existing Extensions
+1. **Update Manifest**: Add new v2.0 schema fields (repository, permissions, etc.)
+2. **GitHub Integration**: Link your extension to a GitHub repository
+3. **CI/CD Setup**: Implement the provided GitHub Actions workflow
+4. **Testing**: Use the new automated testing framework
+
+#### Backward Compatibility
+- v1.0 manifests continue to work but with limited automation features
+- Gradual migration path with automated schema upgrade assistance
+- Documentation and tooling to ease transition process
+
 ## Community
 
 - **Documentation**: [UnboundUI Extension Docs](https://docs.unboundui.com/extensions)
